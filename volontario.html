@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>Diventa Volontario - Rifugio U.E.P.A.</title>
+
+    <meta name="title" content="Diventa un volontario del Rifugio U.E.P.A. di Tribano" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="language" content="italian it" />
+
+</head>
+
+<body>
+
+    <div id=contenutoVolontario>
+        <h2>Diventa un volontario del Rifugio</h2>
+        <p>I micetti di ringraziano!</p>
+
+    </div>
+
+    <form method="POST" action="nuovoVolontario.php">
+
+        <fieldset>
+            <legend>Dati Anagrafici</legend>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" maxlength="30" value="<valoreNome />" /><br />
+            <label for="cognome">Cognome:</label>
+            <input type="text" id="cognome" name="cognome" maxlength="30" value="<valoreCognome />" /><br />
+            <label for="dataNascita">Data di Nascita (gg/mm/aaaa):</label>
+            <input type="text" id="dataNascita" name="dataNascita" maxlength="10" value="<valoreData />" /><br />
+            <label for="citta">Città di residenza:</label>
+            <input type="text" id="citta" name="citta" maxlength="30" value="<valoreCitta />"/><br />
+            <label for="telefono">Numero di telefono:</label>
+            <input type="text" id="telefono" name="telefono" maxlength="10" value="<valoreTelefono />" /><br />
+        </fieldset>
+        <fieldset>
+            <legend>Informazioni Generali</legend>
+
+            <p>Hai già svolto volontariato presso altri enti?</p>
+            <div>
+            <input type="radio" id="noVolontario" name="volontariato" value="no" checked>
+            <label for="noVolontario">No, mai</label>
+            </div>
+            <div>
+            <input type="radio" id="siVolonratio" name="volontariato" value="si">
+            <label for="siVolontario">Si</label><br>
+            </div>
+
+            <p>Sei o sei stato proprietario di animali?</p>
+            <div>
+            <input type="radio" id="noAnimali" name="animali" value="no" checked>
+            <label for="noAnimali">No, purtroppo</label>
+            </div>
+            <div>
+            <input type="radio" id="siAnimali" name="animali" value="si">
+            <label for="siAnimali">Si, certo</label><br>
+            </div>
+
+            <label for="oreVol">Quante ore a settimana puoi dedicare al volontariato? </label>
+            <input type="text" id="oreVol" name="oreVol" maxlength="3" value="<valoreOre />"/><br />
+
+            <label for="motivazione">Perché desideri diventare un volontario?</label> 
+            <textarea id="motivazione" name="motivazione" value="<valoreMotiv />" rows="5" cols="50"> 
+                Inserisci qui la tua motivazione.
+            </textarea>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Inoltra la tua candidatura</legend>
+            <button type="submit" name="submit">Invia!</button>
+        </fieldset>
+
+
+
+    </form>
+
+
+
+</body>
+
+</html>
