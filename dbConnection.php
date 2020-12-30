@@ -40,6 +40,40 @@ class DBAccess {
             return false;
         }
     }
+    
+    public function getListaVolontari() {
+
+        $querySelect = "SELECT * FROM volontari ORDER BY Nome ASC";
+        $queryResult = mysqli_query($this->connection, $querySelect);
+    
+        if (mysqli_num_rows($queryResult) == 0) {
+            return null;
+        } else {
+
+            $listaVolontari = array();
+            while ($riga = mysqli_fetch_assoc($queryResult)) {
+
+                $singoloVolontario = array(
+
+                    "Nome" => $riga['Nome'],   
+                    "Cognome" => $riga['Cognome'],
+                    "DataNascita" => $riga['DataN'],
+                    "Citta" => $riga['Citta'],
+                    "Telefono" => $riga['Telefono'],
+                    "Volontariato" => $riga['Volontario'],
+                    "Animali" => $riga['Animali'],
+                    "Ore" => $riga['Ore'],
+                    "Motivazione" => $riga['Motivo'],
+
+                );
+
+                array_push($listaVolontari, $singoloVolontario);
+            }
+
+            return $listaVolontari;
+        }
+    
+    }
 
 
 
