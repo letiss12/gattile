@@ -12,10 +12,11 @@
     <meta name="keywords" content="" />
     <meta name="author" content="" />
     <meta name="language" content="italian it" />
+    <script type="text/javascript" src="checkFormVolontario.js"></script>
 
 </head>
 
-<body >
+<body onload="caricamento()">
 
     <div id=contenutoVolontario>
         <h2>Diventa un volontario del Rifugio</h2>
@@ -23,7 +24,9 @@
 
     </div>
 
-    <form method="POST" action="nuovoVolontario.php">
+    <form method="POST" action="nuovoVolontario.php" onsubmit="return validateForm()">
+
+        <messaggiForm />
 
         <fieldset>
             <legend>Dati Anagrafici</legend>
@@ -65,9 +68,7 @@
             <span><input type="text" id="oreVol" name="oreVol" maxlength="3" value="<valoreOre />"/></span><br />
 
             <label for="motivazione">Perché desideri diventare un volontario?</label> 
-            <span><textarea id="motivazione" name="motivazione" value="<valoreMotiv />" rows="5" cols="50"> 
-                Inserisci qui la tua motivazione.
-            </textarea></span>
+            <span><textarea id="motivazione" name="motivazione" value="<valoreMotiv />" rows="5" cols="50"></textarea></span>
 
         </fieldset>
 
