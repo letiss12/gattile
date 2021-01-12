@@ -30,7 +30,7 @@ class DBAccess {
 
     public function inserisciVolontario($nome, $cognome, $dataNascita, $citta, $telefono, $volontario, $animali, $ore, $motivazione) {
         
-        $queryInserimento = "INSERT INTO volontari(Nome, Cognome, DataN, Citta, Telefono, Volontario, Animali, Ore, Motivo) VALUES (\"$nome\", \"$cognome\", \"$dataNascita\", \"$citta\", \"$telefono\", \"$volontario\", \"$animali\", \"$ore\", \"$motivazione\")";
+        $queryInserimento = "INSERT INTO volontari(nome, cognome, dataN, citta, telefono, volontario, animali, ore, motivo) VALUES (\"$nome\", \"$cognome\", \"$dataNascita\", \"$citta\", \"$telefono\", \"$volontario\", \"$animali\", \"$ore\", \"$motivazione\")";
 
         mysqli_query($this->connection, $queryInserimento);
 
@@ -55,15 +55,15 @@ class DBAccess {
 
                 $singoloVolontario = array(
 
-                    "Nome" => $riga['Nome'],   
-                    "Cognome" => $riga['Cognome'],
-                    "DataNascita" => $riga['DataN'],
-                    "Citta" => $riga['Citta'],
-                    "Telefono" => $riga['Telefono'],
-                    "Volontariato" => $riga['Volontario'],
-                    "Animali" => $riga['Animali'],
-                    "Ore" => $riga['Ore'],
-                    "Motivazione" => $riga['Motivo'],
+                    "Nome" => $riga['nome'],   
+                    "Cognome" => $riga['cognome'],
+                    "DataNascita" => $riga['dataN'],
+                    "Citta" => $riga['citta'],
+                    "Telefono" => $riga['telefono'],
+                    "Volontariato" => $riga['volontario'],
+                    "Animali" => $riga['animali'],
+                    "Ore" => $riga['ore'],
+                    "Motivazione" => $riga['motivo'],
 
                 );
 
