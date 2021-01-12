@@ -6,7 +6,7 @@ use DB\DBAccess;
 $paginaHTML = file_get_contents('volontario.html');
 
 $messaggioPerForm = '';
-$nome = 'aaaaaaaaaaaa'; $cognome = 'bbbbbbb'; $dataNascita = ''; $citta = ''; $telefono = ''; $volontario = ''; $animali = ''; $ore = ''; $motavazione = '';
+$nome = ''; $cognome = ''; $dataNascita = ''; $citta = ''; $telefono = ''; $volontario = ''; $animali = ''; $ore = ''; $motavazione = '';
 
 if (isset($_POST['submit'])) { 
 
