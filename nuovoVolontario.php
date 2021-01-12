@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
     $motavazione = $_POST['motivazione'];
 
     // CONTROLLI DA MODIFICARE, TROPPO BANALI
-    if (strlen($nome) != 0 && strlen($cognome) != 0 && strlen($dataNascita) != 0 && strlen($citta) != 0 && is_numeric($telefono) && is_numeric($ore) && strlen($motivazione) > 30 ) {
+    if (strlen($nome) != 0 && strlen($cognome) != 0 && strlen($dataNascita) != 0 && strlen($citta) != 0 && is_numeric($telefono) && is_numeric($ore) && strlen($motivazione) > 5 ) {
         // inserisco info nel database
         $dbAccess = new DBAccess();
         $openDBConnection = $dbAccess->openDBConnection();
@@ -69,7 +69,7 @@ if (isset($_POST['submit'])) {
         if (!is_numeric($ore)) {
             $messaggioPerForm .= '<li>Inserire le ore in formato numerico</li>';
         }
-        if (strlen($motivazione) < 30) {
+        if (strlen($motivazione) == 0) {
             $messaggioPerForm .= '<li>La motivazione deve essere di almeno 30 caratteri</li>';
         }
 
