@@ -8,7 +8,7 @@ var dettagli_form = {
 	"motivazione": ["Motivazione", /.{30,}/ ,"Spiega per quale motivo vorresti diventare volontario presso il Rifugio U.E.P.A. "]
 };
 
-unction campoDefault(input) {
+function campoDefault(input) {
     
     input.className = "default-text"; // mi permette di definire il colore
     input.value = dettagli_form[input.id][0];
