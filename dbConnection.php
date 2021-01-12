@@ -30,9 +30,9 @@ class DBAccess {
 
     public function inserisciVolontario($nome, $cognome, $dataNascita, $citta, $telefono, $volontario, $animali, $ore, $motivazione) {
         
-        $queryInserimento = "INSERT INTO volontari(nome, cognome, dataN, citta, telefono, volontario, animali, ore, motivo) VALUES (\"$nome\", \"$cognome\", \"$dataNascita\", \"$citta\", \"$telefono\", \"$volontario\", \"$animali\", \"$ore\", \"$motivazione\")";
+        $queryInsV = " INSERT INTO volontari(nome, cognome, dataN, citta, telefono, volontario, animali, ore, motivo) VALUES (\"$nome\", \"$cognome\", \"$dataNascita\", \"$citta\", \"$telefono\", \"$volontario\", \"$animali\", \"$ore\", \"$motivazione\") ";
 
-        mysqli_query($this->connection, $queryInserimento);
+        mysqli_query($this->connection, $queryInsV);
 
         $righe = mysqli_affected_rows($this->connection);
 
@@ -76,6 +76,60 @@ class DBAccess {
         }
     
     }
+
+    public function inserisciGatto($nome, $genere, $adozione, $descrizione, $nomeImm, $altImm) {
+
+        $queryInsG = " INSERT INTO gatti(nome, genere, adozione, descrizione, nomeImmagine, altImmagine) VALUES (\"$nome\", \"$genere\", \"$adozione\", \"$descrizione\", \"$nomeImm\", \"$altImm\") ";
+
+        mysqli_query($this->connection, $queryInsG);
+
+        $righe = mysqli_affected_rows($this->connection);
+
+        if ($righe > 0){
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    public function getListaGatti() {
+
+        $querySelect = "SELECT * FROM gatti ORDER BY ID ASC";
+        $queryResult = mysqli_query($this->connection, $querySelect);
+    
+        if (mysqli_num_rows($queryResult) == 0) {
+            return null;
+        } else {
+
+            $listaGat = array();
+            while ($riga = mysqli_fetch_assoc($queryResult)) {
+
+                $singoloGat = array(
+
+                    "Nome" => $riga['nome'],
+                    "Genere" => $riga['genere'],
+                    "Adozione" => $riga['adozione'],
+                    "Descrizione" => $riga['descrizione'],
+                    "NomeImm" => $riga['nomeImmagine'],
+                    "AltImm" => $riga['altImmagine']
+                );
+
+                array_push($listaGat, $singoloGat);
+            }
+
+            return $listaGat;
+        }
+    
+    }
+
+    public function getNumAdottati() {
+
+        $queryCount = " SELECT COUNT(*) FROM gatti WHERE adozione=1 ";
+        $queryResult = mysqli_query($this->connection, $queryCount);
+
+        return $queryResult;
+    } 
 
 
 
