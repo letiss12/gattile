@@ -32,13 +32,23 @@ class DBAccess {
         
         $queryInserimento = "INSERT INTO volontari(nome, cognome, dataN, citta, telefono, volontario, animali, ore, motivo) VALUES (\"$nome\", \"$cognome\", \"$dataNascita\", \"$citta\", \"$telefono\", \"$volontario\", \"$animali\", \"$ore\", \"$motivazione\")";
 
+        $righePrima = mysqli_num_rows($this->connection);
+
         mysqli_query($this->connection, $queryInserimento);
 
-        if (mysqli_affected_rows($this->connection) > 0) {
+        $righeDopo = mysqli_num_rows($this->connection); 
+
+        if ($righePrima < $righeDopo) {
             return true;
         } else {
             return false;
         }
+        /*
+        if (mysqli_affected_rows($this->connection) > 0) {
+            return true;
+        } else {
+            return false;
+        }*/
     }
     
     public function getListaVolontari() {
