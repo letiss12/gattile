@@ -17,7 +17,7 @@ if ($connessioneRiuscita == false) {
     $defVolontari = "";
 
     if ($listaVolontari != null) {
-        // creo parte pg html con elenco dei personaggi
+        
         $defVolontari = '<dl id="descrizioneVolontari">';
 
         foreach ($listaVolontari as $volontario) {
@@ -48,7 +48,6 @@ if ($connessioneRiuscita == false) {
 
     }
     else {
-        // messaggo che dice che non ci sono protagonisti nel DB
         $defVolontari = "<p>Non ci sono volontari registrati</p>";
     }
 
