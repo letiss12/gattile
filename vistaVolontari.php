@@ -31,25 +31,25 @@ if ($connessioneRiuscita == false) {
 
             $checkA = '';
             if ($volontario['Animali'] == 1) {
-                $checkV = 'ha già avuto animali';
+                $checkA = 'ha già avuto animali';
             } else if ($volontario['Animali'] == 0) {
-                $checkV = 'non ha mai avuto animali';
+                $checkA = 'non ha mai avuto animali';
             }
 
             $defVolontari .= '<dt>' . $volontario['Nome'] .' '. $volontario['Cognome'] . '</dt>';
             $defVolontari .= '<dd>';
             $defVolontari .= '<p>Nato il ' . $volontario['DataN'] . ' residente a ' . $volontario['Citta'] . ' numero di telefono: ' . $volontario['Telefono'] . '</p>';
-            $defVolontari .= '<p>' . $checkV . ' e ' . $checkV . '. Può dedicare ' . $volontario['Ore'] . ' alla settimana al volontariato.</p>';
+            $defVolontari .= '<p>' . $checkV . ' e ' . $checkA . '. Può dedicare ' . $volontario['Ore'] . ' alla settimana al volontariato.</p>';
             $defVolontari .= '<q>' . $volontario['Motivo'] . '</q>';
             $defVolontari .= '</dd>';
         }
 
-        $definitionListProtagonisti = $definitionListProtagonisti . "</dl>";
+        $defVolontari = $defVolontari . "</dl>";
 
     }
     else {
         // messaggo che dice che non ci sono protagonisti nel DB
-        $definitionListProtagonisti = "<p>Non ci sono volontari registrati</p>";
+        $defVolontari = "<p>Non ci sono volontari registrati</p>";
     }
 
     echo str_replace("<elencoVolontari />", $defVolontari, $paginaHTML);
