@@ -34,7 +34,9 @@ class DBAccess {
 
         mysqli_query($this->connection, $queryInserimento);
 
-        if ((mysqli_affected_rows($this->connection)) > 0){
+        $righe = mysqli_affected_rows($this->connection);
+
+        if ($righe > 0){
             return true;
         } else {
             return false;
