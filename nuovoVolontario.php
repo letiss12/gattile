@@ -41,11 +41,12 @@ if (isset($_POST['submit'])) {
         $risultatoInserimento = $dbAccess->inserisciVolontario($nome, $cognome, $dataNascita, $citta, $telefono, $volontario, $animali, $ore, $motivazione);
         $dbAccess->closeDBConnection();
 
-        if($risultatoInseriemnto == true){
+        if($risultatoInserimento == false){
+            $messaggioPerForm = '<div id="errori"><p>Si è verificato un errore nell\'invio della tua richiesta. Riprova per favore.</p></div>';
+        } else if ($risultatoInserimento == true)  {
+            $messaggioPerForm = '<div id="errori"><p>Si è verificato un errore nell\'invio della tua richiesta. Riprova per favore.</p></div>';
             $messaggioPerForm = '<div id="inserito"><p>La tua richiesta è stata inviata correttamente, un sentito grazie da parte dello staff e di tutti i gatti!</p></div>';
             $nome = ''; $cognome = ''; $dataNascita = ''; $citta = ''; $telefono = ''; $volontario = ''; $animali = ''; $ore = ''; $motavazione = '';
-        } else {
-            $messaggioPerForm = '<div id="errori"><p>Si è verificato un errore nell\'invio della tua richiesta. Riprova per favore.</p></div>';
         }
 
     } else {
