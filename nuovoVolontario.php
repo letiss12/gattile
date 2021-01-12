@@ -69,8 +69,8 @@ if (isset($_POST['submit'])) {
         if (!is_numeric($ore)) {
             $messaggioPerForm .= '<li>Inserire le ore in formato numerico</li>';
         }
-        if (strlen($motivazione) < 50) {
-            $messaggioPerForm .= '<li>La motivazione deve essere di almeno 50 caratteri</li>';
+        if (strlen($motivazione) < 30) {
+            $messaggioPerForm .= '<li>La motivazione deve essere di almeno 30 caratteri</li>';
         }
 
         $messaggioPerForm .= '</ul></div>';
