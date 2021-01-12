@@ -23,24 +23,24 @@ if ($connessioneRiuscita == false) {
         foreach ($listaVolontari as $volontario) {
 
             $checkV = '';
-            if ($volontario['Volontario'] == 1) {
+            if ($volontario['volontario'] == 1) {
                 $checkV = 'Ha gia fatto esperienze di volontariato';
-            } else if ($volontario['Volontario'] == 0) {
+            } else if ($volontario['volontario'] == 0) {
                 $checkV = 'Non ha mai fatto esperienze di volontariato';
             }
 
             $checkA = '';
-            if ($volontario['Animali'] == 1) {
+            if ($volontario['animali'] == 1) {
                 $checkA = 'ha già avuto animali';
-            } else if ($volontario['Animali'] == 0) {
+            } else if ($volontario['animali'] == 0) {
                 $checkA = 'non ha mai avuto animali';
             }
 
-            $defVolontari .= '<dt>' . $volontario['Nome'] .' '. $volontario['Cognome'] . '</dt>';
+            $defVolontari .= '<dt>' . $volontario['nome'] .' '. $volontario['cognome'] . '</dt>';
             $defVolontari .= '<dd>';
-            $defVolontari .= '<p>Nato il ' . $volontario['DataN'] . ' residente a ' . $volontario['Citta'] . ' numero di telefono: ' . $volontario['Telefono'] . '</p>';
-            $defVolontari .= '<p>' . $checkV . ' e ' . $checkA . '. Può dedicare ' . $volontario['Ore'] . ' alla settimana al volontariato.</p>';
-            $defVolontari .= '<q>' . $volontario['Motivo'] . '</q>';
+            $defVolontari .= '<p>Nato il ' . $volontario['dataN'] . ' residente a ' . $volontario['citta'] . ' numero di telefono: ' . $volontario['telefono'] . '</p>';
+            $defVolontari .= '<p>' . $checkV . ' e ' . $checkA . '. Può dedicare ' . $volontario['ore'] . ' alla settimana al volontariato.</p>';
+            $defVolontari .= '<q>' . $volontario['motivo'] . '</q>';
             $defVolontari .= '</dd>';
         }
 
