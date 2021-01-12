@@ -1,7 +1,7 @@
 var dettagli_form = {
-	"nome": ["Nome",/([a-zA-Z])(\ )([a-zA-Z]){2,20}$/ ,"Inserisci il tuo nome"],
-	"cognome": ["Cognome",/([a-zA-Z])(\ )([a-zA-Z]){2,20}$/ ,"Inserisci il tuo cognome"],
-	"dataNascita": ["Data di Nascita",/\d{8,9}/ ,"Inserisci la tua data di nascita in formato GG/MM/AAAA" ],
+	"nome": ["Nome",/([a-zA-Z]){2,20}$/ ,"Inserisci il tuo nome"],
+	"cognome": ["Cognome",/([a-zA-Z]){2,20}$/ ,"Inserisci il tuo cognome"],
+	"dataNascita": ["Data di Nascita",,"Inserisci la tua data di nascita in formato GG/MM/AAAA" ],
 	"citta": ["Città di residenza", ,"Inserisci il nome della città in cui risiedi"],
 	"telefono": ["Numero di telefono", /\d{9,10}/ ,"Inserisci il tuo numero di telefono (cellulare o fisso)"],
 	"oreVol": ["Ore da dedicare al volontariato", /\d{1,3}/ ,"Inserisci in formato numerico il numero di ore che puoi dedicare settimanalmente al volontariato"],
