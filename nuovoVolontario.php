@@ -39,7 +39,7 @@ if (isset($_POST['submit'])) {
         $dbAccess = new DBAccess();
         $openDBConnection = $dbAccess->openDBConnection();
         $risultatoInserimento = $dbAccess->inserisciVolontario($nome, $cognome, $dataNascita, $citta, $telefono, $volontario, $animali, $ore, $motivazione);
-        $dbAccess->closeBDConnection();
+        $dbAccess->closeDBConnection();
 
         if($risultatoInseriemnto == true){
             $messaggioPerForm = '<div id="inserito"><p>La tua richiesta è stata inviata correttamente, un sentito grazie da parte dello staff e di tutti i gatti!</p></div>';
