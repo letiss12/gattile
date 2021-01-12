@@ -38,7 +38,7 @@ if ($connessioneRiuscita == false) {
 
             $defVolontari .= '<dt>' . $volontario['Nome'] .' '. $volontario['Cognome'] . '</dt>';
             $defVolontari .= '<dd>';
-            $defVolontari .= '<p>Nato il ' . $volontario['DataNascita'] . 'e residente a ' . $volontario['Citta'] . ', numero di telefono: ' . $volontario['Telefono'] . '</p>';
+            $defVolontari .= '<p>Nato il ' . $volontario['DataNascita'] . ' e residente a ' . $volontario['Citta'] . ', numero di telefono: ' . $volontario['Telefono'] . '</p>';
             $defVolontari .= '<p>' . $checkV . ' e ' . $checkA . '. Può dedicare ' . $volontario['Ore'] . ' alla settimana al volontariato.</p>';
             $defVolontari .= '<q>' . $volontario['Motivazione'] . '</q>';
             $defVolontari .= '</dd>';
