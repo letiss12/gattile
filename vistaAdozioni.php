@@ -19,7 +19,7 @@ if ($connessioneRiuscita == false) {
 
     if ($listaG != null) {
        
-        $defVolontari = '<dl id="descrizioneGatti">';
+        $defVolontari = '<dl class="schede">';
 
         foreach ($listaG as $gatto) {
 
@@ -32,7 +32,7 @@ if ($connessioneRiuscita == false) {
 
             $defGatti .= '<dt>'. $gatto['Nome'] . '</dt>';
             $defGatti .= '<dd>';
-            $defGatti .= '<img src="immagini'. DIRECTORY_SEPARATOR. $gatto['NomeImm'] . '" alt="' . $gatto['AltImm'] . '" />';
+            $defGatti .= '<img src="immagini'. DIRECTORY_SEPARATOR. 'gatti'. DIRECTORY_SEPARATOR. $gatto['NomeImm'] . '" alt="' . $gatto['AltImm'] . '" />';
             $defGatti .= '<p>' . $checkGenere . '</p>';
             $defGatti .= '<p>' . $gatto['Descrizione'] . '</p>';
             $defGatti .= '</dd>';
