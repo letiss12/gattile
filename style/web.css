@@ -123,9 +123,17 @@ SEZIONE CONTENUTO
     text-align: left;
 }
 
+.contenutoGenerale p {
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    padding: 0.5em 0 0.5em 1.0em;
+}
+
 .elementoBlocco {
     display: block;
 }
+
 
 /*
 ------------------
@@ -261,6 +269,23 @@ IL GATTILE
     padding-bottom: 0.5em;
     font-size: 1.3em;
 }
+
+/*
+------------------
+ADOZIONI
+------------------
+*/
+
+.schede {
+    margin: 0 -10px; 
+    padding: 0; 
+    list-style: 
+    none; display: 
+    flex; flex-wrap: wrap;
+}
+
+
+
 /*
 ------------------
 SEZIONE FOOTER
