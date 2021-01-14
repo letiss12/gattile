@@ -270,7 +270,13 @@ IL GATTILE
     font-size: 1.3em;
 }
 
-
+.schede {
+    margin: 0 -10px; 
+    padding: 0; 
+    list-style: none; 
+    display: flex; 
+    flex-wrap: wrap;
+}
 
 /*
 ------------------
