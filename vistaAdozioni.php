@@ -19,7 +19,7 @@ if ($connessioneRiuscita == false) {
 
     if ($listaG != null) {
        
-        $defVolontari = '<dl class="schede">';
+        $defVolontari = '<dl>';
 
         foreach ($listaG as $gatto) {
 
