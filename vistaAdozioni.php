@@ -19,7 +19,7 @@ if ($connessioneRiuscita == false) {
 
     if ($listaG != null) {
        
-        $defVolontari = '<dl>';
+        $defVolontari = '<dl class="schede">';
 
         foreach ($listaG as $gatto) {
 
@@ -30,12 +30,12 @@ if ($connessioneRiuscita == false) {
                 $checkGenere = 'Maschio';
             }
 
-            $defGatti .= '<dt>'. $gatto['Nome'] . '</dt>';
+            $defGatti .= '<span><dt>'. $gatto['Nome'] . '</dt>';
             $defGatti .= '<dd>';
             $defGatti .= '<img src="immagini'. DIRECTORY_SEPARATOR. 'gatti'. DIRECTORY_SEPARATOR. $gatto['NomeImm'] . '" alt="' . $gatto['AltImm'] . '" />';
             $defGatti .= '<p>' . $checkGenere . '</p>';
             $defGatti .= '<p>' . $gatto['Descrizione'] . '</p>';
-            $defGatti .= '</dd>';
+            $defGatti .= '</dd></span>';
             
         }
 
