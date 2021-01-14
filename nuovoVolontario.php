@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
     $motivazione = $_POST['motivazione'];
 
     
-    if (strlen($nome) < 2 && strlen($cognome) < 2 && strlen($dataNascita) != 10 && strlen($citta) < 2 && is_numeric($telefono) && strlen($telefono) < 9 && is_numeric($ore) && strlen($ore) != 0 && strlen($motivazione) > 30 ) {
+    if (strlen($nome) >= 2 && strlen($cognome) >= 2 && strlen($dataNascita) != 10 && strlen($citta) >= 2 && is_numeric($telefono) && strlen($telefono) >= 9 && is_numeric($ore) && strlen($ore) != 0 && strlen($motivazione) > 30 ) {
         // inserisco info nel database
         $dbAccess = new DBAccess();
         $openDBConnection = $dbAccess->openDBConnection();
