@@ -1,0 +1,285 @@
+* {
+    box-sizing: border-box;
+    padding: 0em;
+    margin: 0em;
+}
+
+html {
+    background-image: url('../immagini/sfondo.jpg');
+    width: 100%;
+    background-color: #FFFFFF;
+    background-size: contain;
+}
+
+body {
+    max-width: 1024px;
+    margin: auto;
+    font-size: 100%;
+    background-color: #FFF;
+    font-family: "Verdana", sans-serif;
+    border: 1px solid #DDD;
+}
+
+.aiutiNascosti {
+    position: absolute;
+    height: 0em;
+    overflow: hidden;
+    list-style-type: none;
+}
+
+/*
+---------------
+SEZIONE HEADER
+---------------
+*/
+
+#header {
+    padding: 1.0em;
+    text-align: center;
+    min-height: 9em;
+    padding-top: 0em;
+}
+
+#header h1 {
+    color: #991700;
+    font-size: 3em;
+    margin: auto;
+    margin-left: 20%;
+    padding-top: 0.5em;
+    text-align: center;
+}
+
+#header h2 {
+    font-size: 1.3em;
+    font-style: italic;
+    font-weight: normal;
+    margin-left: 15%;
+    text-align: center;
+}
+
+#logo{
+    float: left;
+    width: 10%;
+    max-width: 9em;
+    margin: 0.5em;
+    margin-left: 2em;
+}
+
+/*
+-------------------
+SEZIONE MENU
+-------------------
+*/
+
+#menu {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #4F4F4F;
+  font-weight: bold;
+}
+
+#menu li {
+  float: left;
+  list-style-type: none;
+}
+
+#menu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#menu li a:hover {
+  background-color: #991700;
+}
+
+.active {
+  background-color: #991700;
+}
+
+#breadcrumb{
+    background-color: #991700;
+    color: white;
+    padding: 0.5em 0em 0.5em 1.0em;
+    font-weight: bold;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    text-align: left;
+}
+
+/*
+------------------
+SEZIONE CONTENUTO
+------------------
+*/
+
+.contenutoGenerale {
+    width: 80%;
+    font-size: 1em;
+    text-align: left;
+}
+
+.elementoBlocco {
+    display: block;
+}
+
+/*
+------------------
+CHI SIAMO
+------------------
+*/
+
+#contentChiSiamo{
+    padding-left: 2em;
+    padding-right: 2em;
+    width: 100%;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #DDD;
+    font-size: 1em;
+    text-align: center;
+}
+
+.p1, .p3 {
+    text-align: left;
+    margin-top: 1.0em;
+    margin-bottom: 0.5em;
+}
+
+.p2{
+    text-align: right;
+    margin-top: 1.0em;
+    margin-bottom: 1em;
+}
+
+#ChiSiamo {
+    width: 90%;
+}
+
+#ChiSiamo dt {
+    font-weight: bold;
+    color: #000000;
+    padding: 0.9em;
+    margin-top: 0.5em;
+    text-align: left;
+    font-size: 1.5em;
+}
+
+#ChiSiamo dd {
+    border-top: none;
+    padding: 0.5em;
+    min-height: 12em;
+}
+
+#ChiSiamo dd img {
+    float: left;
+    width: 30%;
+    margin-right: 1.0em;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+    overflow: auto;
+}
+
+#ChiSiamo dd p {
+    margin-left: 25%;
+    text-align: justify;
+}
+
+/*
+------------------
+IL GATTILE
+------------------
+*/
+
+#contentIlGattile{
+    padding-left: 2em;
+    padding-right: 2em;
+    width: 100%;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #DDD;
+    font-size: 1em;
+    text-align: left;
+}
+
+#contentIlGattile h1 {
+    color: #991700;
+    font-size: 1.5em;
+    margin: auto;
+    padding-top: 0.5em;
+    text-align: left;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#ComeArrivare {
+    width: 90%;
+}
+
+#ComeArrivare dt {
+    font-weight: bold;
+    color: #000000;
+    margin-top: 0.5em;
+    text-align: left;
+    font-size: 1.3em;
+}
+
+#ComeArrivare dd {
+    border-top: 2em;
+    min-height: 12em;
+}
+
+#ComeArrivare dd img {
+    float: left;
+    width: 30%;
+    margin-right: 1.0em;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+    overflow: auto;
+}
+
+#ComeArrivare dd p {
+    text-align: justify;
+    margin-top: 0.5em;
+}
+
+#contentIlGattile ul {
+    margin-top: 0.5em;
+    padding-left: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: 1.3em;
+}
+/*
+------------------
+SEZIONE FOOTER
+------------------
+*/
+
+#footer{
+    text-align: center;
+    font-style: italic;
+    font-size: 1em;
+    padding: 0.5em;
+    padding-top: 1.3em;
+    border-top: 1px solid #ddd;
+}
+
+#imgValidCode{
+    float: left;
+}
+
+#imgValidCSS{
+    float: right;
+}
