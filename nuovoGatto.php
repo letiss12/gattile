@@ -27,6 +27,7 @@ if (isset($_POST['submit'])) {
         $dbAccess = new DBAccess();
         $openDBConnection = $dbAccess->openDBConnection();
         $risultatoInserimento = $dbAccess->inserisciGatto($nome, $genere, $adozione, $descrizione, $imm, $altImm);
+        $dbAccess->closeDBConnection();
 
         if($risultatoInserimento == false){
             $messaggioPerForm = '<div id="errori"><p>Si è verificato un errore nella registrazione del gatto, riprova per favore.</p></div>';
@@ -51,5 +52,7 @@ if (isset($_POST['submit'])) {
 $paginaHTML = str_replace('<messaggiForm />', $messaggioPerForm, $paginaHTML);
 $paginaHTML = str_replace('<valoreNome />', $nome, $paginaHTML);
 $paginaHTML = str_replace('<valoreDescr />', $descrizione, $paginaHTML);
+
+echo $paginaHTML;
 
 ?>
