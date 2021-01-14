@@ -271,14 +271,14 @@ IL GATTILE
 }
 
 
-.schede {
+dl.schede {
     margin: 0 -10px; 
     padding: 0;  
     display: flex; 
     flex-wrap: wrap;
 }
 
-.schede div {
+dl.schede div {
     background-color: #e5dbff; 
     border: 1px solid #d0bfff; 
     margin: 0 10px 20px 10px; 
