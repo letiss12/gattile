@@ -148,6 +148,21 @@ class DBAccess {
 
     }
 
+    public function eliminaVolontario($ID) {
+        $queryElim = "DELETE FROM volontari WHERE ID=$ID";
+
+        mysqli_query($this->connection, $queryElim);
+
+        $righe = mysqli_affected_rows($this->connection);
+
+        if ($righe > 0){
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
 
 
 
