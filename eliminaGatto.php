@@ -3,7 +3,7 @@
 require_once __DIR__ . DIRECTORY_SEPARATOR . "dbConnection.php";
 use DB\DBAccess;
 
-$pagina = file_get_contents('formEliminaGatto.php');
+$pagina = file_get_contents('eliminaGatto.html');
 
 $messaggioPerForm = '';
 
