@@ -270,28 +270,24 @@ IL GATTILE
     font-size: 1.3em;
 }
 
-#schede dl {
+
+.contenutoAd dl {
     margin: 0 -10px; 
     padding: 0; 
     list-style: none; 
     display: flex; 
     flex-wrap: wrap;
-
 }
 
-#schede img {
-    width: 50%;
-}
-
-#schede div {
+.contenutoAd div {
     background-color: #e5dbff; 
     border: 1px solid #d0bfff; 
     margin: 0 10px 20px 10px; 
     padding: 10px; 
     border-radius: 5px;
     flex: 1 1 200px;
-
 }
+
 
 /*
 ------------------
