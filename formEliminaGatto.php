@@ -19,7 +19,7 @@ if ($connessioneRiuscita == false) {
 
         $defForm = '<fieldset>';
 
-        while ($gatto = mysqli_fetch_array($listaGatti)) {
+        foreach ($listaGatti as $gatto) {
             $ID = $gatto['ID'];
             $nome = $gatto['nome'];
             $defForm .= '<input type="checkbox" name="delete[]" value="' . $ID . '" id="' . $nome . '"/>';
