@@ -270,7 +270,7 @@ IL GATTILE
     font-size: 1.3em;
 }
 
-.schede {
+#schede dl {
     margin: 0 -10px; 
     padding: 0; 
     list-style: none; 
@@ -279,11 +279,11 @@ IL GATTILE
 
 }
 
-.schede img {
+#schede img {
     width: 50%;
 }
 
-.schede div {
+#schede div {
     background-color: #e5dbff; 
     border: 1px solid #d0bfff; 
     margin: 0 10px 20px 10px; 
