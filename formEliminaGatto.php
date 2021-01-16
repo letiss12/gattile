@@ -26,7 +26,8 @@ if ($connessioneRiuscita == false) {
             $defForm .= '<label for="' . $nome . '">' . $nome . '</label><br />';
         }
 
-        $defForm .= '</fieldset>';
+        $defForm .= '</fieldset><fieldset><legend>Rimuovi i gatti selezionati</legend><button type="submit" value="Delete" name="final_delete">Elimina</button></fieldset>';
+        
     }
 
 }
