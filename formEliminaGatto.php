@@ -21,7 +21,7 @@ if ($connessioneRiuscita == false) {
 
         foreach ($listaGatti as $gatto) {
             $ID = $gatto['ID'];
-            $nome = $gatto['nome'];
+            $nome = $gatto['Nome'];
             $defForm .= '<input type="checkbox" name="delete[]" value="' . $ID . '" id="' . $nome . '"/>';
             $defForm .= '<label for="' . $nome . '">' . $nome . '</label>';
         }
