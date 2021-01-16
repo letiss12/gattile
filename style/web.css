@@ -279,7 +279,7 @@ IL GATTILE
     flex-wrap: wrap;
 }
 
-.contenutoAd dd {
+.contenutoAd span {
     background-color: #e5dbff; 
     border: 1px solid #d0bfff; 
     margin: 0 10px 20px 10px; 
