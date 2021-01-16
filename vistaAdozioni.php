@@ -30,11 +30,11 @@ if ($connessioneRiuscita == false) {
                 $checkGenere = 'Maschio';
             }
 
-            $defGatti .= '<div><dt>'. $gatto['Nome'] . '</dt>';
+            $defGatti .= '<dt>'. $gatto['Nome'] . '</dt>';
            // $defGatti .= '<dd>';
             $defGatti .= '<dd><img src="immagini'. DIRECTORY_SEPARATOR. 'gatti'. DIRECTORY_SEPARATOR. $gatto['NomeImm'] . '" alt="' . $gatto['AltImm'] . '" /></dd>';
             $defGatti .= '<dd>' . $checkGenere . '</dd>';
-            $defGatti .= '<dd>' . $gatto['Descrizione'] . '</dd></div>';
+            $defGatti .= '<dd>' . $gatto['Descrizione'] . '</dd>';
            // $defGatti .= '</dd>';
             
         }
