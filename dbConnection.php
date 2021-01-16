@@ -80,7 +80,7 @@ class DBAccess {
 
     public function inserisciGatto($nome, $genere, $adozione, $descrizione, $nomeImm, $altImm) {
 
-        $queryInsG = " INSERT INTO gatti(nome, genere, adozione, descrizione, nomeImmagine, altImmagine) VALUES (\"$nome\", \"$genere\", \"$adozione\", \"$descrizione\", \"$nomeImm\", \"$altImm\") ";
+        $queryInsG = " INSERT INTO gatti(nome, genere, adozione, descrizione, nomeImmagine) VALUES (\"$nome\", \"$genere\", \"$adozione\", \"$descrizione\", \"$nomeImm\") ";
 
         mysqli_query($this->connection, $queryInsG);
 
