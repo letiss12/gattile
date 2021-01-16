@@ -45,7 +45,7 @@ class DBAccess {
     
     public function getListaVolontari() {
 
-        $querySelect = "SELECT * FROM volontari ORDER BY Nome ASC";
+        $querySelect = "SELECT * FROM volontari ORDER BY ID ASC";
         $queryResult = mysqli_query($this->connection, $querySelect);
     
         if (mysqli_num_rows($queryResult) == 0) {
@@ -57,6 +57,7 @@ class DBAccess {
 
                 $singoloVolontario = array(
 
+                    "ID" => $riga['ID'],
                     "Nome" => $riga['nome'],   
                     "Cognome" => $riga['cognome'],
                     "DataNascita" => $riga['dataN'],
@@ -95,7 +96,7 @@ class DBAccess {
 
     public function getListaGatti() {
 
-        $querySelect = "SELECT * FROM gatti ORDER BY ID ASC";
+        $querySelect = " SELECT * FROM gatti ORDER BY ID ASC ";
         $queryResult = mysqli_query($this->connection, $querySelect);
     
         if (mysqli_num_rows($queryResult) == 0) {
@@ -107,6 +108,7 @@ class DBAccess {
 
                 $singoloGat = array(
 
+                    "ID" => $riga['ID'],
                     "Nome" => $riga['nome'],
                     "Genere" => $riga['genere'],
                     "Adozione" => $riga['adozione'],
@@ -129,7 +131,22 @@ class DBAccess {
         $queryResult = mysqli_query($this->connection, $queryCount);
 
         return $queryResult;
-    } 
+    }
+    
+    public function eliminaGatto($ID) {
+        $queryElim = "DELETE FROM gatti WHERE ID=$ID";
+
+        mysqli_query($this->connection, $queryElim);
+
+        $righe = mysqli_affected_rows($this->connection);
+
+        if ($righe > 0){
+            return true;
+        } else {
+            return false;
+        }
+
+    }
 
 
 
