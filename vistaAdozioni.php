@@ -19,7 +19,7 @@ if ($connessioneRiuscita == false) {
 
     if ($listaG != null) {
        
-        $defGatti = '<dl>';
+        $defGatti = '<dl class="schede"><span>';
 
         foreach ($listaG as $gatto) {
 
@@ -39,7 +39,7 @@ if ($connessioneRiuscita == false) {
             
         }
 
-        $defGatti = $defGatti . "</dl>";
+        $defGatti = $defGatti . "</span></dl>";
 
     }
     else {
