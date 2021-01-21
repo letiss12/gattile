@@ -109,7 +109,7 @@ use DB\DBAccess;
 $paginaHTML = file_get_contents('volontario.html');
 
 $messaggioPerForm = '';
-$nome = ''; $cognome = ''; $dataNascita = ''; $citta = ''; $telefono = ''; $volontario = ''; $animali = ''; $ore = ''; $motavazione = '';
+$nome = ''; $cognome = ''; $dataNascita = ''; $citta = ''; $telefono = ''; $volontario = ''; $animali = ''; $ore = ''; $mot = '';
 
 if (isset($_POST['submit'])) { 
 
@@ -134,21 +134,21 @@ if (isset($_POST['submit'])) {
     }*/
 
     $ore = $_POST['oreVol'];
-    $motivazione = $_POST['motivazione'];
+    $mot = $_POST['motivazione'];
 
     
-    if (strlen($nome) >= 2 && strlen($cognome) >= 2 && strlen($dataNascita) != 10 && strlen($citta) >= 2 && is_numeric($telefono) && strlen($telefono) >= 9 && is_numeric($ore) && strlen($ore) != 0 && strlen($motivazione) > 30 ) {
+    if (strlen($nome) >= 2 && strlen($cognome) >= 2 && strlen($dataNascita) != 10 && strlen($citta) >= 2 && is_numeric($telefono) && strlen($telefono) >= 9 && is_numeric($ore) && strlen($ore) != 0 && strlen($mot) > 30 ) {
         // inserisco info nel database
         $dbAccess = new DBAccess();
         $openDBConnection = $dbAccess->openDBConnection();
-        $risultatoInserimento = $dbAccess->inserisciVolontario($nome, $cognome, $dataNascita, $citta, $telefono, $volontario, $animali, $ore, $motivazione);
+        $risultatoInserimento = $dbAccess->inserisciVolontario($nome, $cognome, $dataNascita, $citta, $telefono, $volontario, $animali, $ore, $mot);
         $dbAccess->closeDBConnection();
 
         if($risultatoInserimento == false){
             $messaggioPerForm = '<div id="errori"><p>Si è verificato un errore nell\'invio della tua richiesta. Riprova per favore.</p></div>';
         } else if ($risultatoInserimento == true)  {
             $messaggioPerForm = '<div id="inserito"><p>La tua richiesta è stata inviata correttamente, un sentito grazie da parte dello staff e di tutti i gatti!</p></div>';
-            $nome = ''; $cognome = ''; $dataNascita = ''; $citta = ''; $telefono = ''; $volontario = ''; $animali = ''; $ore = ''; $motivazione = '';
+            $nome = ''; $cognome = ''; $dataNascita = ''; $citta = ''; $telefono = ''; $volontario = ''; $animali = ''; $ore = ''; $mot = '';
         }
 
     } else {
@@ -178,7 +178,7 @@ if (isset($_POST['submit'])) {
         if (!is_numeric($ore)) {
             $messaggioPerForm .= '<li>Inserire le ore in formato numerico</li>';
         }
-        if (strlen($motivazione) < 30) {
+        if (strlen($mot) < 30) {
             $messaggioPerForm .= '<li>La tua spiegazione deve essere di almeno 30 caratteri</li>';
         }
 
@@ -194,7 +194,7 @@ $paginaHTML = str_replace('<valoreData />', $dataNascita, $paginaHTML);
 $paginaHTML = str_replace('<valoreCitta />', $citta, $paginaHTML);
 $paginaHTML = str_replace('<valoreTelefono />', $telefono, $paginaHTML);
 $paginaHTML = str_replace('<valoreOre />', $ore, $paginaHTML);
-$paginaHTML = str_replace('<valoreMotiv />', $motivazione, $paginaHTML);
+$paginaHTML = str_replace('<valoreMotiv />', $mot, $paginaHTML);
 
 
 echo $paginaHTML;
