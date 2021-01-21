@@ -26,7 +26,7 @@ if (isset($_POST['final_delete'])) {
             $dbAccess->closeDBConnection();
 
             if($risultato == false) {
-                $mess = '<div class="messForm" id="errore"><p>Si è verificato un errore.</p><button><a href="formEliminaVolontario.php">TORNA INDIETRO</a></button></div>';
+                $mess = '<div class="messForm" id="errore"><p>Si è verificato un errore.</p><button><a href="formEliminaVolontario.php">Torna indietro</a></button></div>';
             } else if ($risultato == true) {
                 $vol = '';
                 if ($cont == 1) {
@@ -34,10 +34,10 @@ if (isset($_POST['final_delete'])) {
                 } else if ($cont > 1) {
                     $vol = 'volontari';
                 }
-                $mess = '<div class="messForm id="completato"><p>Hai rimosso con successo ' . $cont . ' ' . $vol . ' dalla lista.</p></div>';
+                $mess = '<div class="messForm id="completato"><p>Hai rimosso con successo ' . $cont . ' ' . $vol . ' dalla lista.</p><button><a href="vistaVolontari.php">Torna alla Gestione Volontari</a></button></div>';
             }
         } else {
-            $mess = '<div class="messForm"><p>Non hai selezionato alcuna persona, riprova.</p><button><a href="formEliminaVolontario.php">TORNA INDIETRO</a></button></div>';
+            $mess = '<div class="messForm"><p>Non hai selezionato alcuna persona, riprova.</p><button><a href="formEliminaVolontario.php">Torna indietro</a></button></div>';
         }
     }      
 }
