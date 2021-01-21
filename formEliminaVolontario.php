@@ -9,7 +9,6 @@ $connessioneRiuscita = $dbAccess->openDBConnection();
 
 if ($connessioneRiuscita == false) {
     die ("C'è stato un errore durante l'apertura del database");
-    // si chiude senza dare una risposta all'utente fare un try catch
 } else {
     $listaVol = $dbAccess->getListaVolontari();
     $dbAccess->closeDBConnection();
@@ -17,14 +16,16 @@ if ($connessioneRiuscita == false) {
     $defForm = '';
     if ($listaVol != null) {
 
-        $defForm = '<fieldset>';
+        $defForm = '<fieldset><legend>Persone a disposizione del rifugio</legend>';
 
         foreach ($listaVol as $vol) {
             $ID = $vol['ID'];
             $nome = $vol['Nome'];
             $cognome = $vol['Cognome'];
-            $defForm .= '<input type="checkbox" name="delete[]" value="' . $ID . '" id="' . $nome . $cognome . '"/>';
-            $defForm .= '<label for="' . $nome . $cognome . '">' . $nome . ' ' . $cognome . '</label><br />';
+            $nomcom = $nome.$cognome;
+            $nomcom = trim($nomcom);
+            $defForm .= '<input type="checkbox" name="delete[]" value="' . $ID . '" id="' . $nomcom . '"/>';
+            $defForm .= '<label for="' . $nomcom . '">' . $nome . ' ' . $cognome . '</label><br />';
         }
 
         $defForm .= '</fieldset><fieldset><legend>Rimuovi i volontari selezionati</legend><button type="submit" value="Delete" name="final_delete">Elimina</button></fieldset>';
