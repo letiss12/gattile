@@ -39,7 +39,7 @@ if (isset($_POST['final_delete'])) {
             }
 
         } else {
-            $mess = '<div class="messForm"><p>Non hai selezionato alcun gatto, riprova.</p><button><a href="formEliminaGatto.php>TORNA INDIETRO</a></button></div>';
+            $mess = '<div class="messForm"><p>Non hai selezionato alcun gatto, riprova.</p><button><a href="formEliminaGatto.php">TORNA INDIETRO</a></button></div>';
         }
     }   
 }
