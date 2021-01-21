@@ -11,7 +11,7 @@ $messIndex ='';
 if ($connessioneRiuscita == false) {
     die ("C'è stato un errore durante l'apertura del database");
 } else {
-    $numGatti = $dbAccess->getNumAdottati()
+    $numGatti = $dbAccess->getNumAdottati();
     //$listaG = $dbAccess->getListaGatti();
     $dbAccess->closeDBConnection();
 
