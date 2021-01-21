@@ -23,31 +23,28 @@ if (isset($_POST['submit'])) {
         die ("C'è stato un errore durante l'apertura del database");
     } else {
 
+        if (strlen($nome) > 2 && strlen($descrizione) > 10) {
+            $risultatoInserimento = $dbAccess->inserisciGatto($nome, $genere, $adozione, $descrizione, $imm); 
+            $dbAccess->closeDBConnection();
 
-    if (strlen($nome) > 2 && strlen($descrizione) > 10) {
-        //$dbAccess = new DBAccess();
-        //$openDBConnection = $dbAccess->openDBConnection();
-        $risultatoInserimento = $dbAccess->inserisciGatto($nome, $genere, $adozione, $descrizione, $imm); 
-        $dbAccess->closeDBConnection();
-
-        if($risultatoInserimento == false){
-            $messaggioPerForm = '<div id="errori"><p>Si è verificato un errore nella registrazione del gatto, riprova per favore.</p></div>';
-        } else if ($risultatoInserimento == true)  {
-            $messaggioPerForm = '<div id="inserito"><p>Un nuovo piccolo felino è stato registrato al rifugio!</p></div>';
-            $nome = ''; $descrizione = '';
+            if($risultatoInserimento == false){
+                $messaggioPerForm = '<div id="errori"><p>Si è verificato un errore nella registrazione del gatto, riprova per favore.</p></div>';
+            } else if ($risultatoInserimento == true)  {
+                $messaggioPerForm = '<div id="inserito"><p>Un nuovo piccolo felino è stato registrato al rifugio!</p></div>';
+                $nome = ''; $descrizione = '';
+            }
         }
-    }
-    else {
-        $dbAccess->closeDBConnection();
-        $messaggioPerForm = '<div id="errori"><ul>';
-        if (strlen($nome) <= 2) {
-            $messaggioPerForm .= '<li>Il nome del gatto è troppo corto per essere inserito</li>';
-        }
-        if (strlen($descrizione) <= 10) {
-            $messaggioPerForm .= '<li>Inserire una descrizione di almeno 10 caratteri per il gatto</li>';
-        }
-        $messaggioPerForm .= '</ul></div>';
-    }
+        else {
+            $dbAccess->closeDBConnection();
+            $messaggioPerForm = '<div id="errori"><ul>';
+            if (strlen($nome) <= 2) {
+                $messaggioPerForm .= '<li>Il nome del gatto è troppo corto per essere inserito</li>';
+            }
+            if (strlen($descrizione) <= 10) {
+                $messaggioPerForm .= '<li>Inserire una descrizione di almeno 10 caratteri per il gatto</li>';
+            }
+            $messaggioPerForm .= '</ul></div>';
+        }   
 
     }
 
