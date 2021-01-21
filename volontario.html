@@ -15,10 +15,14 @@
      <div id="contenutoVolontario">
         <h2>Diventa un volontario del Rifugio</h2>
         <p>I micetti di ringraziano!</p>
+     </div>
+     
+     <div>
 
         <form method="POST" action="nuovoVolontario.php" >
 
             <messaggiForm />
+
             <fieldset>
                 <legend>Dati Anagrafici</legend>
                 <label for="nome">Nome:</label>
@@ -32,6 +36,7 @@
                 <label for="telefono">Numero di telefono:</label>
                 <span><input type="text" id="telefono" name="telefono" maxlength="10" value="<valoreTelefono />" /></span><br />
             </fieldset>
+
             <fieldset>
                 <legend>Informazioni Generali</legend>
                 <p>Hai già svolto volontariato presso altri enti?</p>
@@ -57,11 +62,14 @@
                 <label for="motivazione">Perché desideri diventare un volontario?</label> 
                 <span><textarea id="motivazione" name="motivazione" value="<valoreMotiv />" rows="5" cols="50"></textarea></span>
             </fieldset>
+
             <fieldset>
                 <legend>Inoltra la tua candidatura</legend>
                 <button type="submit" name="submit">Invia!</button>
             </fieldset>
+            
         </form>
+
         </div>
     </body>
     </html>
