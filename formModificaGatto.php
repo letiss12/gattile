@@ -19,7 +19,7 @@ if ($connessioneRiuscita == false) {
             if ($gatto['Adozione'] == 0) {
                 $ID = $gatto['ID'];
                 $nome = $gatto['Nome'];
-                $nomeF = $gatto.$ID;
+                $nomeF = $nome.$ID;
                 $nomeF = trim($nomeF);
                 $defForm .= '<input type="checkbox" name="updateAdot[]" value="' . $ID . '" id="' . $nomeF . '"/>';
                 $defForm .= '<label for="' . $nomeF . '">' . $nome . '</label><br />';
@@ -30,7 +30,7 @@ if ($connessioneRiuscita == false) {
             if ($gatto['Adozione'] == 1) {
                 $ID = $gatto['ID'];
                 $nome = $gatto['Nome'];
-                $nomeF = $gatto.$ID;
+                $nomeF = $nome.$ID;
                 $nomeF = trim($nomeF);
                 $defForm .= '<input type="checkbox" name="updateNonAdot[]" value="' . $ID . '" id="' . $nomeF . '"/>';
                 $defForm .= '<label for="' . $nomeF . '">' . $nome . '</label><br />';
