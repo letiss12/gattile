@@ -9,7 +9,6 @@ $connessioneRiuscita = $dbAccess->openDBConnection();
 
 if ($connessioneRiuscita == false) {
     die ("C'è stato un errore durante l'apertura del database");
-    // si chiude senza dare una risposta all'utente fare un try catch
 } else {
     $listaGatti = $dbAccess->getListaGatti();
     $dbAccess->closeDBConnection();
@@ -17,13 +16,15 @@ if ($connessioneRiuscita == false) {
     $defForm = '';
     if ($listaGatti != null) {
 
-        $defForm = '<fieldset>';
+        $defForm = '<fieldset><legend>Gatti registrati al rifugio</legend>';
 
         foreach ($listaGatti as $gatto) {
             $ID = $gatto['ID'];
             $nome = $gatto['Nome'];
-            $defForm .= '<input type="checkbox" name="delete[]" value="' . $ID . '" id="' . $nome . '"/>';
-            $defForm .= '<label for="' . $nome . '">' . $nome . '</label><br />';
+            $nomeF = $gatto.$ID;
+            $nomeF = trim($nomeF);
+            $defForm .= '<input type="checkbox" name="delete[]" value="' . $ID . '" id="' . $nomeF . '"/>';
+            $defForm .= '<label for="' . $nomeF . '">' . $nome . '</label><br />';
         }
 
         $defForm .= '</fieldset><fieldset><legend>Rimuovi i gatti selezionati</legend><button type="submit" value="Delete" name="final_delete">Elimina</button></fieldset>';
