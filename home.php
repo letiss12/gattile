@@ -3,7 +3,6 @@ require_once __DIR__ . DIRECTORY_SEPARATOR . "dbConnection.php";
 use DB\DBAccess;
 
 $paginaHTML = file_get_contents('home.html');
-$messIndex ='';
 
 $dbAccess = new dbAccess();
 $connessioneRiuscita = $dbAccess->openDBConnection();
@@ -13,6 +12,7 @@ if ($connessioneRiuscita == false) {
 } else {
     $listaG = $dbAccess->getListaGatti();
     $dbAccess->closeDBConnection();
+    $messIndex ='';
 
     if ($listaG != null) {
 
