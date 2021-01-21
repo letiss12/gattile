@@ -14,19 +14,13 @@ if (isset($_POST['submit'])) {
     $descrizione = $_POST['descrizione'];
     $adozione = $_POST['adozione'];
     $genere = $_POST['genere'];
-    /*
-    if ($adozione == 'si') {
-        $adozione = 1;
-    } else if ($adozione == 'no') {
-        $adozione = 0;
-    }*/
     $imm = ''; 
     $dbAccess = new DBAccess();
     $connessioneRiuscita = $dbAccess->openDBConnection();
 
-    if ($connessioneRiuscita == false) {
-        die ("C'è stato un errore durante l'apertura del database");
-    } else {
+   // if ($connessioneRiuscita == false) {
+    //    die ("C'è stato un errore durante l'apertura del database");
+   // } else {
 
         if (strlen($nome) > 2 && strlen($descrizione) > 10) {
             $risultatoInserimento = $dbAccess->inserisciGatto($nome, $genere, $adozione, $descrizione, $imm);
@@ -51,7 +45,7 @@ if (isset($_POST['submit'])) {
             $messaggioPerForm .= '</ul></div>';
         }
 
-    }
+    //}
 
 }
 
