@@ -16,11 +16,9 @@ if ($connessioneRiuscita == false) {
     $defGatti = "";
 
     if ($listaG != null) {
-       
-        $defGatti = '<dl>';
-
+        
+        $defGatti = '<h3>Gatti che cercano ancora una casa</h3><dl>';
         foreach ($listaG as $gatto) {
-
             if ($gatto['Adozione'] == 0) {
                 $checkGenere = '';
                 if ($gatto['Genere'] == 1) {
@@ -29,16 +27,27 @@ if ($connessioneRiuscita == false) {
                     $checkGenere = 'Maschio';
                 }
 
-                $defGatti .= '<span><dt>'. $gatto['Nome'] . '</dt>';
-                $defGatti .= '<dd>';
-                $defGatti .= '<img src="immagini'. DIRECTORY_SEPARATOR. 'gatti'. DIRECTORY_SEPARATOR. $gatto['NomeImm'] . '" alt="' . $gatto['AltImm'] . '" />';
-                $defGatti .= '<p>' . $checkGenere . '</p>';
-                $defGatti .= '<p>' . $gatto['Descrizione'] . '</p>';
-                $defGatti .= '</dd></span>';
+                $defGatti .= '<span><dt>'. $gatto['Nome'] . ' - '. $checkGenere . '</dt>';
+                $defGatti .= '<dd><img src="immagini'. DIRECTORY_SEPARATOR. 'gatti'. DIRECTORY_SEPARATOR. $gatto['NomeImm'] . '" alt="' . $gatto['AltImm'] . '" /></dd></span>';
+            }      
+        }
+        $defGatti = '</dl><h3>Gatti che sono già stati adottati</h3><dl>';
+        foreach ($listaG as $gatto) {
+
+            if ($gatto['Adozione'] == 1) {
+                $checkGenere = '';
+                if ($gatto['Genere'] == 1) {
+                    $checkGenere = 'Femmina';
+                } else if ($gatto['Genere'] == 0) {
+                    $checkGenere = 'Maschio';
+                }
+
+                $defGatti .= '<span><dt>'. $gatto['Nome'] . ' - '. $checkGenere . '</dt>';
+                $defGatti .= '<dd><img src="immagini'. DIRECTORY_SEPARATOR. 'gatti'. DIRECTORY_SEPARATOR. $gatto['NomeImm'] . '" alt="' . $gatto['AltImm'] . '" /></dd></span>';
+
             }    
             
         }
-
         $defGatti = $defGatti . "</dl>";
 
     }
