@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
     if (strlen($nome) > 2 && strlen($descrizione) > 10) {
         $dbAccess = new DBAccess();
         $openDBConnection = $dbAccess->openDBConnection();
-        $risultatoInserimento = $dbAccess->inserisciGatto($nome, $genere, $adozione, $descrizione, $imm, $altImm);
+        $risultatoInserimento = $dbAccess->inserisciGatto($nome, $genere, $adozione, $descrizione, $imm); // c'era anche alt imm
         $dbAccess->closeDBConnection();
 
         if($risultatoInserimento == false){
