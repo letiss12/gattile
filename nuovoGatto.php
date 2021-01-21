@@ -14,19 +14,13 @@ if (isset($_POST['submit'])) {
     $descrizione = $_POST['descrizione'];
     $adozione = $_POST['adozione'];
     $genere = $_POST['genere'];
-    /*
-    if ($adozione == 'si') {
-        $adozione = 1;
-    } else if ($adozione == 'no') {
-        $adozione = 0;
-    }*/
     $imm = ''; $altImm = '';
 
 
     if (strlen($nome) > 2 && strlen($descrizione) > 10) {
         $dbAccess = new DBAccess();
         $openDBConnection = $dbAccess->openDBConnection();
-        $risultatoInserimento = $dbAccess->inserisciGatto($nome, $genere, $adozione, $descrizione, $imm);
+        $risultatoInserimento = $dbAccess->inserisciGatto($nome, $genere, $adozione, $descrizione, $imm, $altImm);
         $dbAccess->closeDBConnection();
 
         if($risultatoInserimento == false){
