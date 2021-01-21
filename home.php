@@ -2,7 +2,7 @@
 require_once __DIR__ . DIRECTORY_SEPARATOR . "dbConnection.php";
 use DB\DBAccess;
 
-$paginaHTML = file_get_contents('adozioni.html');
+$paginaHTML = file_get_contents('home.html');
 
 $dbAccess = new dbAccess();
 $connessioneRiuscita = $dbAccess->openDBConnection();
