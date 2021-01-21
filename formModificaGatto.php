@@ -14,7 +14,7 @@ if ($connessioneRiuscita == false) {
     $dbAccess->closeDBConnection();
     $defForm = '';
     if ($listaGatti != null) {
-        $defForm = '<fieldset><legend>Qualcuno di questi gatti è stato adottato di recente?</legend>';
+        $defForm .= '<fieldset><legend>Qualcuno di questi gatti è stato adottato di recente?</legend>';
         foreach ($listaGatti as $gatto) {
             if ($gatto['Adozione'] == 0) {
                 $ID = $gatto['ID'];
