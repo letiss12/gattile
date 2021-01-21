@@ -27,7 +27,7 @@ if (isset($_POST['final_delete'])) {
             $dbAccess->closeDBConnection();
 
             if($risultato == false) {
-                $mess = '<div class="messForm"><p class="errore">Si è verificato un errore.</p><button><a href="formEliminaGatto.php">TORNA INDIETRO</a></button></div>';
+                $mess = '<div class="messForm"><p class="errore">Si è verificato un errore.</p><button><a href="formEliminaGatto.php">Torna indietro</a></button></div>';
             } else if ($risultato == true) {
                 $gatt = '';
                 if ($cont == 1) {
@@ -35,11 +35,11 @@ if (isset($_POST['final_delete'])) {
                 } else if ($cont > 1) {
                     $gatt = 'gatti';
                 }
-                $mess = '<div class="messForm"><p class="completato">Hai rimosso con successo '. $cont . ' ' . $gatt . ' dal rifugio.</p></div>';
+                $mess = '<div class="messForm"><p class="completato">Hai rimosso con successo '. $cont . ' ' . $gatt . ' dal rifugio.</p><button><a href="vistaGatti.php">Torna alla Gestione Gatti</a></button></div>';
             }
 
         } else {
-            $mess = '<div class="messForm"><p>Non hai selezionato alcun gatto, riprova.</p><button><a href="formEliminaGatto.php">TORNA INDIETRO</a></button></div>';
+            $mess = '<div class="messForm"><p>Non hai selezionato alcun gatto, riprova.</p><button><a href="formEliminaGatto.php">Torna indietro</a></button></div>';
         }
     }   
 }
