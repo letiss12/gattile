@@ -120,18 +120,18 @@ if (isset($_POST['submit'])) {
     $telefono = $_POST['telefono'];
 
     $volontario = $_POST['volontariato'];
-    if ($volontario == 'si') {
+    /*if ($volontario == 'si') {
         $volontario = 1;
     } else if ($volontario == 'no') {
         $volontario = 0;
-    }
+    }*/
 
     $animali = $_POST['animali'];
-    if ($animali == 'si') {
+   /* if ($animali == 'si') {
         $animali = 1;
     } else if ($animali == 'no') {
         $animali = 0;
-    }
+    }*/
 
     $ore = $_POST['oreVol'];
     $motivazione = $_POST['motivazione'];
@@ -148,7 +148,7 @@ if (isset($_POST['submit'])) {
             $messaggioPerForm = '<div id="errori"><p>Si è verificato un errore nell\'invio della tua richiesta. Riprova per favore.</p></div>';
         } else if ($risultatoInserimento == true)  {
             $messaggioPerForm = '<div id="inserito"><p>La tua richiesta è stata inviata correttamente, un sentito grazie da parte dello staff e di tutti i gatti!</p></div>';
-            $nome = ''; $cognome = ''; $dataNascita = ''; $citta = ''; $telefono = ''; $volontario = ''; $animali = ''; $ore = ''; $motavazione = '';
+            $nome = ''; $cognome = ''; $dataNascita = ''; $citta = ''; $telefono = ''; $volontario = ''; $animali = ''; $ore = ''; $motivazione = '';
         }
 
     } else {
