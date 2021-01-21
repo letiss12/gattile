@@ -37,7 +37,7 @@ if (isset($_POST['final_delete'])) {
                 $mess = '<div class="messForm id="completato"><p>Hai rimosso con successo ' . $cont . ' ' . $vol . ' dalla lista.</p></div>';
             }
         } else {
-            $mess = '<div class="messForm><p>Non hai selezionato alcuna persona, riprova.</p><button><a href="formEliminaVolontario.php>TORNA INDIETRO</a></button></div>';
+            $mess = '<div class="messForm><p>Non hai selezionato alcuna persona, riprova.</p><button><a href="formEliminaVolontario.php">TORNA INDIETRO</a></button></div>';
         }
     }      
 }
