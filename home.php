@@ -12,22 +12,42 @@ if ($connessioneRiuscita == false) {
 } else {
     $listaG = $dbAccess->getListaGatti();
     $dbAccess->closeDBConnection();
-    $messIndex ='';
+
+    $defGatti = "";
 
     if ($listaG != null) {
+       
+        $defGatti = '<dl>';
 
-        $messIndex = '<p>Questi bellissimi gatti hanno già trovato una casa! Tu cosa aspetti?</p><dl>';
         foreach ($listaG as $gatto) {
-            if ($gatto['Adozione'] == 1) {
-                $messIndex .= '<dt>'. $gatto['Nome'] .'</dt>';
-                $messIndex .= '<dd><img src="immagini'. DIRECTORY_SEPARATOR. 'gatti'. DIRECTORY_SEPARATOR. $gatto['NomeImm'] . '" alt="' . $gatto['AltImm'] . '" /></dd>';
-            }
-            $messIndex .= '</dl>';
 
+            if ($gatto['Adozione'] == 0) {
+                $checkGenere = '';
+                if ($gatto['Genere'] == 1) {
+                    $checkGenere = 'Femmina';
+                } else if ($gatto['Genere'] == 0) {
+                    $checkGenere = 'Maschio';
+                }
+
+                $defGatti .= '<span><dt>'. $gatto['Nome'] . '</dt>';
+                $defGatti .= '<dd>';
+                $defGatti .= '<img src="immagini'. DIRECTORY_SEPARATOR. 'gatti'. DIRECTORY_SEPARATOR. $gatto['NomeImm'] . '" alt="' . $gatto['AltImm'] . '" />';
+                $defGatti .= '<p>' . $checkGenere . '</p>';
+                $defGatti .= '<p>' . $gatto['Descrizione'] . '</p>';
+                $defGatti .= '</dd></span>';
+            }    
+            
         }
+
+        $defGatti = $defGatti . "</dl>";
+
+    }
+    else {
+       
+        $defGatti = "<p>Non ci sono gatti al momento</p>";
     }
 
-    str_replace("<contatoreGatti />", $messIndex, $paginaHTML);
+    echo str_replace("<elencoGatti />", $defGatti, $paginaHTML);
    
 }
 
