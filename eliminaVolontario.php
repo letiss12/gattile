@@ -9,21 +9,37 @@ $mess = '';
 
 if (isset($_POST['final_delete'])) {
     $dbAccess = new DBAccess();
-    $openDBConnection = $dbAccess->openDBConnection();
-    $risultato = false;
-    if (isset($_POST['delete'])) {
-        foreach ($_POST['delete'] as $deleteID) {
-            $risultato = $dbAccess->eliminaVolontario($deleteID);
-        }
-    }
-    $dbAccess->closeDBConnection();
+    $connessioneRiuscita = $dbAccess->openDBConnection();
 
-    if($risultato == false) {
-        $mess = '<div id="errori"><p>Si è verificato un errore.</p></div>';
-    } else if ($risultato == true) {
-        $mess = '<div id="inserito"><p>Eliminazione completata</p></div>';
-    }
-    
+    if ($connessioneRiuscita == false) {
+        die ("C'è stato un errore durante l'apertura del database");
+    } else {
+        $risultato = false;
+        $cont = 0;
+        if (isset($_POST['delete'])) {
+
+            foreach ($_POST['delete'] as $deleteID) {
+                $risultato = $dbAccess->eliminaVolontario($deleteID);
+                $cont = $cont + 1;
+            }
+        
+            $dbAccess->closeDBConnection();
+
+            if($risultato == false) {
+                $mess = '<div class="messForm" id="errore"><p>Si è verificato un errore.</p><button><a href="formEliminaVolontario.php">TORNA INDIETRO</a></button></div>';
+            } else if ($risultato == true) {
+                $vol = '';
+                if ($cont == 1) {
+                    $vol = 'volontario';
+                } else if ($cont > 1) {
+                    $vol = 'volontari';
+                }
+                $mess = '<div class="messForm id="completato"><p>Hai rimosso con successo ' . $cont . ' ' . $vol . ' dalla lista.</p></div>';
+            }
+        } else {
+            $mess = '<div class="messForm><p>Non hai selezionato alcuna persona, riprova.</p><button><a href="formEliminaVolontario.php>TORNA INDIETRO</a></button></div>';
+        }
+    }      
 }
 
 $pagina = str_replace('<messaggiForm />', $mess, $pagina);
