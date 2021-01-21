@@ -284,6 +284,10 @@ ADOZIONI
     flex-wrap: wrap;
 }
 
+.contenutoAd img {
+    width: 50%;
+}
+
 
 .contenutoAd span {
     background-color: #e5dbff; 
