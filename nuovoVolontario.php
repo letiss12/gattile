@@ -10,18 +10,21 @@ if (isset($_POST['submit'])) {
     $dataNascita = $_POST['dataNascita'];
     $citta = $_POST['citta'];
     $telefono = $_POST['telefono'];
+
     $volontario = $_POST['volontariato'];
     if ($volontario == 'si') {
         $volontario = 1;
     } else if ($volontario == 'no') {
         $volontario = 0;
     }
+
     $animali = $_POST['animali'];
     if ($animali == 'si') {
         $animali = 1;
     } else if ($animali == 'no') {
         $animali = 0;
     }
+    
      $ore = $_POST['oreVol'];
      $motivazione = $_POST['motivazione'];
 
