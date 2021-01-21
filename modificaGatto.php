@@ -34,7 +34,7 @@ if (isset($_POST['final_update'])) {
             $dbAccess->closeDBConnection();
 
             if (!$risA && !$risB) {
-                $mess .='<p class="errore>Si è verificato un errore.</p><button><a href="formModificaGatto.php">TORNA INDIETRO</a></button></div>';
+                $mess .='<p class="errore>Si è verificato un errore.</p><button><a href="formModificaGatto.php">Torna indietro</a></button></div>';
             } else {
                 if ($risA == true) {
                     $mess .= '<p>Hai aggiunto ai gatti adottati ' . $contA . ' gatto/i</p>';
@@ -42,11 +42,11 @@ if (isset($_POST['final_update'])) {
                 if ($risB == true) {
                     $mess .= '<p>Hai aggiunto ai gatti non adottati ' . $contB . ' gatto/i</p>';
                 }
-                $mess .= '<a href="">TORNA ALLA PAGINA DI GESTIONE</a></button><a href="">VISUALIZZA TUTTI I GATTI</a></button></div>';
+                $mess .= '<button><a href="vistaGatti.php">Torna alla Gestione Gatti </a></button></div>';
             }
 
         } else {
-            $mess = '<p>Non hai selezionato alcun gatto, riprova.</p><button><a href="formModificaGatto.php">TORNA INDIETRO</a></button></div>';
+            $mess = '<p>Non hai selezionato alcun gatto, riprova.</p><button><a href="formModificaGatto.php">Torna indietro</a></button></div>';
         }
 
 
