@@ -41,5 +41,5 @@ if ($connessioneRiuscita == false) {
         
     }    
 }
-echo str_replace("<valoreForm />", $defForm, $paginaHTML);
+echo str_replace("<contenutoForm />", $defForm, $paginaHTML);
 ?>
