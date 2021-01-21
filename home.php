@@ -47,11 +47,8 @@ if ($connessioneRiuscita == false) {
         $defGatti = "<p>Non ci sono gatti al momento</p>";
     }
 
-    str_replace("<elencoGatti />", $defGatti, $paginaHTML);
-   
+    echo str_replace("<elencoGatti />", $defGatti, $paginaHTML);
 }
 
-
-echo $paginaHTML;
 
 ?>
