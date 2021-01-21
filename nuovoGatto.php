@@ -18,9 +18,9 @@ if (isset($_POST['submit'])) {
     $dbAccess = new DBAccess();
     $connessioneRiuscita = $dbAccess->openDBConnection();
 
-   // if ($connessioneRiuscita == false) {
-    //    die ("C'è stato un errore durante l'apertura del database");
-   // } else {
+   if ($connessioneRiuscita == false) {
+        $messaggioPerForm ='C\'è stato un errore durante l\'apertura del database';
+    } else {
 
         if (strlen($nome) > 2 && strlen($descrizione) > 10) {
             $risultatoInserimento = $dbAccess->inserisciGatto($nome, $genere, $adozione, $descrizione, $imm);
@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
             }
 
         } else {
-            $dbAccess->closeDBConnection();
+            //$dbAccess->closeDBConnection();
             $messaggioPerForm = '<div class="messForm id="errore"><ul>';
             if (strlen($nome) <= 2) {
                 $messaggioPerForm .= '<li>Il nome del gatto è troppo corto per essere inserito</li>';
@@ -45,7 +45,7 @@ if (isset($_POST['submit'])) {
             $messaggioPerForm .= '</ul></div>';
         }
 
-    //}
+    }
 
 }
 
