@@ -163,6 +163,37 @@ class DBAccess {
 
     }
 
+    public function modificaStatusAdottato($ID) {
+        $queryMod = " UPDATE gatti SET adozione=1 WHERE ID=$ID ";
+
+        mysqli_query($this->connection, $queryMod);
+
+        $righe = mysqli_affected_rows($this->connection);
+
+        if ($righe > 0){
+            return true;
+        } else {
+            return false;
+        }
+
+
+    }
+
+    public function modificaStatusNonAdottato($ID) {
+        $queryMod = " UPDATE gatti SET adozione=0 WHERE ID=$ID ";
+
+        mysqli_query($this->connection, $queryMod);
+
+        $righe = mysqli_affected_rows($this->connection);
+
+        if ($righe > 0){
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
 
 
 
