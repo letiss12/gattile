@@ -47,7 +47,7 @@ if (isset($_POST['submit'])) {
             $messaggioPerForm .= '</ul></div>';
         }
 
-    }
+    //}
 
 }
 
