@@ -54,6 +54,9 @@ if (isset($_POST['final_update'])) {
     }
 }
 
+$pagina = str_replace('<messaggiForm />', $mess, $pagina);
+
+echo $pagina;
 
 
 ?>
