@@ -137,7 +137,7 @@ if (isset($_POST['submit'])) {
     $mot = $_POST['motivazione'];
 
     
-    if (strlen($nome) >= 2 && strlen($cognome) >= 2 && strlen($dataNascita) != 10 && strlen($citta) >= 2 && is_numeric($telefono) && strlen($telefono) >= 9 && is_numeric($ore) && strlen($ore) != 0 && strlen($mot) >= 30 ) {
+    if (strlen($nome) >= 2 && strlen($cognome) >= 2 && strlen($dataNascita) != 10 && strlen($citta) >= 2 && is_numeric($telefono) && strlen($telefono) >= 9 && is_numeric($ore) && strlen($ore) != 0  ) {
         // inserisco info nel database
         $dbAccess = new DBAccess();
         $openDBConnection = $dbAccess->openDBConnection();
@@ -178,9 +178,9 @@ if (isset($_POST['submit'])) {
         if (!is_numeric($ore)) {
             $messaggioPerForm .= '<li>Inserire le ore in formato numerico</li>';
         }
-        if (strlen($mot) < 30) {
-            $messaggioPerForm .= '<li>La tua spiegazione deve essere di almeno 30 caratteri</li>';
-        }
+        //if (strlen($mot) < 30) {
+        //    $messaggioPerForm .= '<li>La tua spiegazione deve essere di almeno 30 caratteri</li>';
+        //}
 
         $messaggioPerForm .= '</ul></div>';
 
