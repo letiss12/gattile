@@ -78,7 +78,7 @@ class DBAccess {
     
     }
 
-    public function inserisciGatto($nome, $genere, $adozione, $descrizione, $nomeImm, $altImm) {
+    public function inserisciGatto($nome, $genere, $adozione, $descrizione, $nomeImm) { // c'era anche alt imm
 
         $queryInsG = " INSERT INTO gatti(nome, genere, adozione, descrizione, nomeImmagine) VALUES (\"$nome\", \"$genere\", \"$adozione\", \"$descrizione\", \"$nomeImm\") ";
 
