@@ -31,7 +31,7 @@ if ($connessioneRiuscita == false) {
                 $defGatti .= '<dd><img src="immagini'. DIRECTORY_SEPARATOR. 'gatti'. DIRECTORY_SEPARATOR. $gatto['NomeImm'] . '" alt="' . $gatto['AltImm'] . '" /></dd></span>';
             }      
         }
-        $defGatti = '</dl><h3>Gatti che sono già stati adottati</h3><dl>';
+        $defGatti .= '</dl><h3>Gatti che sono già stati adottati</h3><dl>';
         foreach ($listaG as $gatto) {
 
             if ($gatto['Adozione'] == 1) {
