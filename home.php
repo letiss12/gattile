@@ -21,6 +21,8 @@ if ($connessioneRiuscita == false) {
 
 }
 
-echo str_replace("<contatoreGatti />", $messIndex, $paginaHTML);
+str_replace("<contatoreGatti />", $messIndex, $paginaHTML);
+
+echo $paginaHTML;
 
 ?>
