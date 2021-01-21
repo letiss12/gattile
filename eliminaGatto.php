@@ -9,21 +9,39 @@ $mess = '';
 
 if (isset($_POST['final_delete'])) {
     $dbAccess = new DBAccess();
-    $openDBConnection = $dbAccess->openDBConnection();
-    $risultato = false;
-    if (isset($_POST['delete'])) {
-        foreach ($_POST['delete'] as $deleteID) {
-            $risultato = $dbAccess->eliminaGatto($deleteID);
-        }
-    }
-    $dbAccess->closeDBConnection();
+    $connessioneRiuscita = $dbAccess->openDBConnection();
 
-    if($risultato == false) {
-        $mess = '<div id="errori"><p>Si è verificato un errore.</p></div>';
-    } else if ($risultato == true) {
-        $mess = '<div id="inserito"><p>Eliminazione completata</p></div>';
-    }
-    
+    if ($connessioneRiuscita == false) {
+        die ("C'è stato un errore durante l'apertura del database");
+    } else {
+
+        $risultato = false;
+        $cont = 0;
+        if (isset($_POST['delete'])) {
+
+            foreach ($_POST['delete'] as $deleteID) {
+                $risultato = $dbAccess->eliminaGatto($deleteID);
+                $cont = $cont + 1;
+            }
+
+            $dbAccess->closeDBConnection();
+
+            if($risultato == false) {
+                $mess = '<div class="messForm"><p class="errore">Si è verificato un errore.</p><button><a href="formEliminaGatto.php">TORNA INDIETRO</a></button></div>';
+            } else if ($risultato == true) {
+                $gatt = '';
+                if ($cont == 1) {
+                    $gatt= 'gatto';
+                } else if ($cont > 1) {
+                    $gatt = 'gatti';
+                }
+                $mess = '<div class="messForm"><p class="completato">Hai rimosso con successo '. $cont . ' ' . $gatt . ' dal rifugio.</p></div>';
+            }
+
+        } else {
+            $mess = '<div class="messForm"><p>Non hai selezionato alcun gatto, riprova.</p><button><a href="formEliminaGatto.php>TORNA INDIETRO</a></button></div>';
+        }
+    }   
 }
 
 $pagina = str_replace('<messaggiForm />', $mess, $pagina);
