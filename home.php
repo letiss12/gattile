@@ -3,10 +3,10 @@ require_once __DIR__ . DIRECTORY_SEPARATOR . "dbConnection.php";
 use DB\DBAccess;
 
 $paginaHTML = file_get_contents('home.html');
+$messIndex ='';
 
 $dbAccess = new dbAccess();
 $connessioneRiuscita = $dbAccess->openDBConnection();
-$messIndex ='';
 
 if ($connessioneRiuscita == false) {
     die ("C'è stato un errore durante l'apertura del database");
@@ -27,11 +27,10 @@ if ($connessioneRiuscita == false) {
         }
     }
 
-
+    str_replace("<contatoreGatti />", $messIndex, $paginaHTML);
    
 }
 
-str_replace("<contatoreGatti />", $messIndex, $paginaHTML);
 
 echo $paginaHTML;
 
