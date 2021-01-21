@@ -9,12 +9,10 @@ $connessioneRiuscita = $dbAccess->openDBConnection();
 
 if ($connessioneRiuscita == false) {
     die ("C'è stato un errore durante l'apertura del database");
-    // si chiude senza dare una risposta all'utente fare un try catch
 } else {
     $listaG = $dbAccess->getListaGatti();
     $dbAccess->closeDBConnection();
 
-    //definizione lista di gatti
     $defGatti = "";
 
     if ($listaG != null) {
@@ -23,19 +21,21 @@ if ($connessioneRiuscita == false) {
 
         foreach ($listaG as $gatto) {
 
-            $checkGenere = '';
-            if ($gatto['Genere'] == 1) {
-                $checkGenere = 'Femmina';
-            } else if ($gatto['Genere'] == 0) {
-                $checkGenere = 'Maschio';
-            }
+            if ($gatto['Adozione'] == 0) {
+                $checkGenere = '';
+                if ($gatto['Genere'] == 1) {
+                    $checkGenere = 'Femmina';
+                } else if ($gatto['Genere'] == 0) {
+                    $checkGenere = 'Maschio';
+                }
 
-            $defGatti .= '<span><dt>'. $gatto['Nome'] . '</dt>';
-            $defGatti .= '<dd>';
-            $defGatti .= '<img src="immagini'. DIRECTORY_SEPARATOR. 'gatti'. DIRECTORY_SEPARATOR. $gatto['NomeImm'] . '" alt="' . $gatto['AltImm'] . '" />';
-            $defGatti .= '<p>' . $checkGenere . '</p>';
-            $defGatti .= '<p>' . $gatto['Descrizione'] . '</p>';
-            $defGatti .= '</dd></span>';
+                $defGatti .= '<span><dt>'. $gatto['Nome'] . '</dt>';
+                $defGatti .= '<dd>';
+                $defGatti .= '<img src="immagini'. DIRECTORY_SEPARATOR. 'gatti'. DIRECTORY_SEPARATOR. $gatto['NomeImm'] . '" alt="' . $gatto['AltImm'] . '" />';
+                $defGatti .= '<p>' . $checkGenere . '</p>';
+                $defGatti .= '<p>' . $gatto['Descrizione'] . '</p>';
+                $defGatti .= '</dd></span>';
+            }    
             
         }
 
