@@ -15,9 +15,7 @@ if (isset($_POST['submit'])) {
     $adozione = $_POST['adozione'];
     $genere = $_POST['genere'];
     $imm = ''; 
-    $dbAccess = new DBAccess();
-    $connessioneRiuscita = $dbAccess->openDBConnection();
-
+    
   // if ($connessioneRiuscita == false) {
     //    $messaggioPerForm ='C\'è stato un errore durante l\'apertura del database';
   //  } else {
