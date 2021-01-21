@@ -31,8 +31,11 @@ class DBAccess {
     public function inserisciVolontario($nome, $cognome, $dataNascita, $citta, $telefono, $volontario, $animali, $ore, $motivazione) {
         
         $queryInsV = " INSERT INTO volontari(nome, cognome, dataN, citta, telefono, volontario, animali, ore, motivo) VALUES (\"$nome\", \"$cognome\", \"$dataNascita\", \"$citta\", \"$telefono\", \"$volontario\", \"$animali\", \"$ore\", \"$motivazione\") ";
+        
         mysqli_query($this->connection, $queryInsV);
+        
         $righe = mysqli_affected_rows($this->connection);
+        
         if ($righe > 0){
             return true;
         } else {
