@@ -18,11 +18,13 @@ if (isset($_POST['submit'])) {
     $dbAccess = new DBAccess();
     $connessioneRiuscita = $dbAccess->openDBConnection();
 
-   if ($connessioneRiuscita == false) {
-        $messaggioPerForm ='C\'è stato un errore durante l\'apertura del database';
-    } else {
+  // if ($connessioneRiuscita == false) {
+    //    $messaggioPerForm ='C\'è stato un errore durante l\'apertura del database';
+  //  } else {
 
         if (strlen($nome) > 2 && strlen($descrizione) > 10) {
+            $dbAccess = new DBAccess();
+            $connessioneRiuscita = $dbAccess->openDBConnection();
             $risultatoInserimento = $dbAccess->inserisciGatto($nome, $genere, $adozione, $descrizione, $imm);
             $dbAccess->closeDBConnection();
 
