@@ -28,8 +28,10 @@ class DBAccess {
         $this->connection->close();
     }
 
-    public function inserisciVolontario($nome, $cognome, $dataNascita, $citta, $telefono, $volontario, $animali, $ore, $mot) {
+    public function inserisciVolontario($nome, $cognome, $dataNascita, $citta, $telefono, $volontario, $animali, $ore, $motivazione) {
+        
         $queryInsV = " INSERT INTO volontari(nome, cognome, dataN, citta, telefono, volontario, animali, ore, motivo) VALUES (\"$nome\", \"$cognome\", \"$dataNascita\", \"$citta\", \"$telefono\", \"$volontario\", \"$animali\", \"$ore\", \"$motivazione\") ";
+        
         mysqli_query($this->connection, $queryInsV);
 
         $righe = mysqli_affected_rows($this->connection);
