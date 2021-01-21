@@ -46,7 +46,7 @@ if (isset($_POST['final_update'])) {
             }
 
         } else {
-            $mess = '<p>Non hai selezionato alcun gatto, riprova.</p><button><a href="formModificaGatto.php>TORNA INDIETRO</a></button></div>';
+            $mess = '<p>Non hai selezionato alcun gatto, riprova.</p><button><a href="formModificaGatto.php">TORNA INDIETRO</a></button></div>';
         }
 
 
