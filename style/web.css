@@ -8,8 +8,7 @@ html {
     background-image: url('../immagini/sfondo.jpg');
     width: 100%;
     background-color: #FFFFFF;
-    background-repeat: repeat;
-    background-size: 20em;
+    background-size: contain;
 }
 
 body {
@@ -19,14 +18,6 @@ body {
     background-color: #FFF;
     font-family: "Verdana", sans-serif;
     border: 1px solid #DDD;
-}
-
-a:link {
-    color: #000;
-}
-
-a:visted {
-    color: #FFFC41;
 }
 
 .aiutiNascosti {
@@ -50,7 +41,7 @@ SEZIONE HEADER
 }
 
 #header h1 {
-    color: #000000;
+    color: #991700;
     font-size: 3em;
     margin: auto;
     margin-left: 20%;
@@ -85,32 +76,34 @@ SEZIONE MENU
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #F29BA2;
+  background-color: #4F4F4F;
   font-weight: bold;
 }
 
 #menu li {
+  float: left;
   list-style-type: none;
-  color: #001E57;
+}
+
+#menu li a {
+  display: block;
+  color: white;
   text-align: center;
-  padding: 1em 1em;
-  display: inline-block;
+  padding: 14px 16px;
   text-decoration: none;
-  font-size: 1.2em;
-  
 }
 
 #menu li a:hover {
-  background-color: #A3D9D9;
+  background-color: #991700;
 }
 
-#currentlink {
-  background-color: #A3D9D9;
+.active {
+  background-color: #991700;
 }
 
 #breadcrumb{
-    background-color: #F29BA2;
-    color: #000000;
+    background-color: #991700;
+    color: white;
     padding: 0.5em 0em 0.5em 1.0em;
     font-weight: bold;
     border-top: 1px solid #DDD;
@@ -130,9 +123,17 @@ SEZIONE CONTENUTO
     text-align: left;
 }
 
+.contenutoGenerale p {
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    padding: 0.5em 0 0.5em 1.0em;
+}
+
 .elementoBlocco {
     display: block;
 }
+
 
 /*
 ------------------
@@ -146,7 +147,7 @@ CHI SIAMO
     width: 100%;
     border-left: 1px solid #ddd;
     border-right: 1px solid #DDD;
-    font-size: 1.2em;
+    font-size: 1em;
     text-align: center;
 }
 
@@ -163,17 +164,16 @@ CHI SIAMO
 }
 
 #ChiSiamo {
-    width: 100%;
+    width: 90%;
 }
 
 #ChiSiamo dt {
     font-weight: bold;
-    color: #DD6B05;
+    color: #000000;
     padding: 0.9em;
     margin-top: 0.5em;
     text-align: left;
     font-size: 1.5em;
-    clear: left;
 }
 
 #ChiSiamo dd {
@@ -188,26 +188,13 @@ CHI SIAMO
     margin-right: 1.0em;
     margin-top: 0.5em;
     margin-left: 0.5em;
-    overflow: hidden;
-    clear: both;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
+    overflow: auto;
 }
 
-#contentChiSiamo dd p {
-    margin-left: 35%;
+#ChiSiamo dd p {
+    margin-left: 25%;
     text-align: justify;
-    color: black;
-    background-color: white;
-    padding: 2em;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    border-style: ridge;
-    border-color: orange;
 }
-
 
 /*
 ------------------
@@ -226,129 +213,91 @@ IL GATTILE
 }
 
 #contentIlGattile h1 {
-    color: #8F000C;
-    font-size: 2em;
+    color: #991700;
+    font-size: 1.5em;
     margin: auto;
     padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    text-align: center;
+    text-align: left;
 }
 
-#bannerGattile {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 1em;
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
 }
 
-#contentIlGattile p {
-    clear: left;
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#ComeArrivare {
+    width: 90%;
+}
+
+#ComeArrivare dt {
+    font-weight: bold;
+    color: #000000;
+    margin-top: 0.5em;
+    text-align: left;
+    font-size: 1.3em;
+}
+
+#ComeArrivare dd {
+    border-top: 2em;
+    min-height: 12em;
+}
+
+#ComeArrivare dd img {
+    float: left;
+    width: 30%;
+    margin-right: 1.0em;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+    overflow: auto;
+}
+
+#ComeArrivare dd p {
     text-align: justify;
-    font-size: 1.2em;
+    margin-top: 0.5em;
 }
 
-#contentIlGattile h2 {
-    color: #8F000C;
-    font-size: 2em;
-    margin: auto;
-    padding-top: 0.5em;
+#contentIlGattile ul {
+    margin-top: 0.5em;
+    padding-left: 0.5em;
     padding-bottom: 0.5em;
-    text-align: center;
+    font-size: 1.3em;
 }
 
 /*
----------------
-SEZIONE COME AIUTARCI
----------------
+------------------
+ADOZIONI
+------------------
 */
 
-#contentComeAiutarci{
-    padding-left: 2em;
-    padding-right: 2em;
-    width: 100%;
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #DDD;
-    font-size: 1.2em;
-    text-align: justify;
+.contenutoAd dl {
+    margin: 0 -10px; 
+    padding: 0; 
+    list-style: none; 
+    display: flex; 
+    flex-wrap: wrap;
 }
 
-#contentComeAiutarci h1{
-    text-align: center;
-    font-size: 1.3em;
-    color: #DD6B05;
-    margin: auto;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-}
-
-#contentComeAiutarci h2{
-    text-align: center;
-    font-size: 1em;
-    color: #DD6B05;
-    margin: auto;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-}
-
-#contentComeAiutarci h3{
-    text-align: left;
-    font-size: 1em;
-    color: #DD6B05;
-    margin: auto;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-}
-
-#contentComeAiutarci p {
-    text-align: center;
-    font-size: 1em;
-    margin: auto;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-}
-
-#ComeAiutarci {
-    width: 100%;
-}
-
-#ComeAiutarci dt {
-    font-weight: bold;
-    color: #DD6B05;
-    margin-top: 0.5em;
-    text-align: left;
-    font-size: 1em;
-}
-
-#ComeAiutarci dd {
-    border-top: none;
-    padding: 0.5em;
+.contenutoAd img {
+    width: 80%;
 }
 
 
-#ComeAiutarci dd p {
-    text-align: justify;
+.contenutoAd span {
+    background-color: #e5dbff; 
+    border: 1px solid #d0bfff; 
+    margin: 0 10px 20px 10px; 
+    padding: 10px; 
+    border-radius: 5px;
+    flex: 1 1 400px;
 }
 
-.button {
-  background-color: #F29BA2;
-  border: none;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: underline;
-  display: block;
-  font-size: 2em;
-  width: 50%;
-  cursor: pointer;
-  display: inline-block;
-
-}
-
-.button:hover {
-  background-color: #A3D9D9;
-  color: white;
-}
 
 /*
 ------------------
