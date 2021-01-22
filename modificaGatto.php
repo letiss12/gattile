@@ -34,7 +34,7 @@ if (isset($_POST['final_update'])) {
             $dbAccess->closeDBConnection();
 
             if (!$risA && !$risB) {
-                $mess .='<p class="errore>Si è verificato un errore.</p><button><a href="formModificaGatto.php">Torna indietro</a></button></div>';
+                $mess .='<p class="errore">Si è verificato un errore.</p><button><a href="formModificaGatto.php">Torna indietro</a></button></div>';
             } else {
                 if ($risA == true) {
                     $mess .= '<p>Hai aggiunto ai gatti adottati ' . $contA . ' gatto/i</p>';
