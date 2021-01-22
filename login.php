@@ -26,7 +26,7 @@ if (isset($_POST['username'])){
         $dbAccess->closeDBConnection();
         if ($admin != null) {
            
-            $mess .= '<p>$admin esiste</p>';
+            $mess .= '<p>$admin esiste '. $admin .'</p>';
         
 
         } else {
