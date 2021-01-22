@@ -32,9 +32,10 @@ class DBAccess {
 
         $query = "SELECT * FROM users ";
         $queryResult = mysqli_query($this->connection, $query);
-        //$rows = mysqli_num_rows($queryResult);
-        //return $rows;
+        $rows = mysqli_num_rows($queryResult);
+        return $rows;
 
+        /*
         if (mysqli_num_rows($queryResult) == 0) {
             return null;
         } else {
@@ -53,6 +54,7 @@ class DBAccess {
 
             return $listaAdmin;
         }
+        */
 
     }
 
