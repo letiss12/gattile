@@ -1,47 +1,41 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Login</title>
-<link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
 <?php
-require('dbConnection.php');
+require __DIR__ . DIRECTORY_SEPARATOR . "dbConnection.php";
+use DB\DBAccess;
 session_start();
+
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+    header("location: gestione.php");
+    exit;
+}
+$mess ='';
+$pagina = file_get_contents('login.html');
 // If form submitted, insert values into the database.
 if (isset($_POST['username'])){
-        // removes backslashes
-	$username = stripslashes($_REQUEST['username']);
-        //escapes special characters in a string
-	$username = mysqli_real_escape_string($connection,$username);
-	$password = stripslashes($_REQUEST['password']);
-	$password = mysqli_real_escape_string($connection,$password);
-	//Checking is user existing in the database or not
-        $query = "SELECT * FROM `users` WHERE username='$username'
-and password='".md5($password)."'";
-	$result = mysqli_query($connection,$query) or die(mysql_error());
-	$rows = mysqli_num_rows($result);
-        if($rows==1){
-	    $_SESSION['username'] = $username;
-            // Redirect user to index.php
-	    header("Location: in.php");
-         }else{
-	echo "<div class='form'>
-<h3>Username/password is incorrect.</h3>
-<br/>Click here to <a href='login.php'>Login</a></div>";
-	}
-    }else{
+     
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+	//$username = stripslashes($_REQUEST['username']);
+	//$password = stripslashes($_REQUEST['password']);	
+    $dbAccess = new DBAccess();
+    $connessioneRiuscita = $dbAccess->openDBConnection();
+
+    if ($connessioneRiuscita == false) {
+        die ("C'è stato un errore durante l'apertura del database");
+    } else {
+        $admin = $dbAccess->getAdmin($username, $password);
+        $dbAccess->closeDBConnection();
+        if ($admin == 1) {
+            $_SESSION['username'] = $username;
+            $_SESSION["loggedin"] = true;
+            header("Location: gestione.php");
+        } else {
+            $mess = '<p>Username o password non corretti. Riprova.</p>';
+        }
+    }
+} 
+
+$pagina = str_replace('<messForm />', $mess, $pagina);
+
+echo $pagina;   
+
 ?>
-<div class="form">
-<h1>Log In</h1>
-<form action="" method="post" name="login">
-<input type="text" name="username" placeholder="Username" required />
-<input type="password" name="password" placeholder="Password" required />
-<input name="submit" type="submit" value="Login" />
-</form>
-<p>Not registered yet? <a href='registration.php'>Register Here</a></p>
-</div>
-<?php } ?>
-</body>
-</html>
