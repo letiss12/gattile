@@ -30,31 +30,10 @@ class DBAccess {
 
     public function getAdmin($username, $password) {
 
-        $query = "SELECT * FROM users ";
+        $query = "SELECT * FROM users WHERE username=\"$username\" AND pw=\"$password\"";
         $queryResult = mysqli_query($this->connection, $query);
         $rows = mysqli_num_rows($queryResult);
         return $rows;
-
-        /*
-        if (mysqli_num_rows($queryResult) == 0) {
-            return null;
-        } else {
-
-            $listaAdmin = array();
-            while ($riga = mysqli_fetch_assoc($queryResult)) {
-
-                $singoloAdmin = array(
-
-                    "username" => $riga['username'],
-                    "pw" => $riga['pw']
-                );
-
-                array_push($listaAdmin, $singoloAdmin);
-            }
-
-            return $listaAdmin;
-        }
-        */
 
     }
 
