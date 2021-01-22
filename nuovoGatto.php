@@ -28,15 +28,15 @@ if (isset($_POST['submit'])) {
             $dbAccess->closeDBConnection();
 
             if($risultatoInserimento == false){
-                $messaggioPerForm = '<div id="errori"><p>Si è verificato un errore nella registrazione del gatto, riprova per favore.</p></div>';
+                $messaggioPerForm = '<div class="messForm"><p>Si è verificato un errore nella registrazione del gatto, riprova per favore.</p></div>';
             } else if ($risultatoInserimento == true)  {
-                $messaggioPerForm = '<div id="inserito"><p>Un nuovo piccolo felino è stato registrato al rifugio!</p></div>';
+                $messaggioPerForm = '<div class="messForm"><p>Un nuovo piccolo felino è stato registrato al rifugio!</p></div>';
                 $nome = ''; $descrizione = '';
             }
         }
         else {
             $dbAccess->closeDBConnection();
-            $messaggioPerForm = '<div id="errori"><ul>';
+            $messaggioPerForm = '<div class="messForm"><ul>';
             if (strlen($nome) <= 2) {
                 $messaggioPerForm .= '<li>Il nome del gatto è troppo corto per essere inserito</li>';
             }
