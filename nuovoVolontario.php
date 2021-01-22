@@ -11,21 +11,8 @@ if (isset($_POST['submit'])) {
     $dataNascita = $_POST['dataNascita'];
     $citta = $_POST['citta'];
     $telefono = $_POST['telefono'];
-
     $volontario = $_POST['volontariato'];
-    if ($volontario == 'si') {
-        $volontario = 1;
-    } else if ($volontario == 'no') {
-        $volontario = 0;
-    }
-
     $animali = $_POST['animali'];
-    if ($animali == 'si') {
-        $animali = 1;
-    } else if ($animali == 'no') {
-        $animali = 0;
-    }
-
     $ore = $_POST['oreVol'];
     $motivazione = $_POST['motivazione'];
 
@@ -41,15 +28,15 @@ if (isset($_POST['submit'])) {
             $dbAccess->closeDBConnection();
 
             if($risultatoInserimento == false){
-                $messaggioPerForm = '<div id="errori"><p>Si è verificato un errore nell\'invio della tua richiesta. Riprova per favore.</p></div>';
+                $messaggioPerForm = '<div class="messForm"><p class="errore>Si è verificato un errore nell\'invio della tua richiesta. Riprova per favore.</p></div>';
             } else if ($risultatoInserimento == true)  {
-                $messaggioPerForm = '<div id="inserito"><p>La tua richiesta è stata inviata correttamente, un sentito grazie da parte dello staff e di tutti i gatti!</p></div>';
+                $messaggioPerForm = '<div class="messForm"><p class="completato>La tua richiesta è stata inviata correttamente, un sentito grazie da parte dello staff e di tutti i gatti!</p></div>';
                 $nome = ''; $cognome = ''; $dataNascita = ''; $citta = ''; $telefono = ''; $volontario = ''; $animali = ''; $ore = ''; $motavazione = '';
             }
 
         } else {
             $dbAccess->closeDBConnection();
-            $messaggioPerForm = '<div id="errori"><ul>';
+            $messaggioPerForm = '<div class="messForm><ul>';
             if (strlen($nome) < 2) {
                 $messaggioPerForm .= '<li>Il nome inserito è troppo corto</li>';
             }
