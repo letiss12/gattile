@@ -24,26 +24,14 @@ if (isset($_POST['username'])){
     } else {
         $admin = $dbAccess->getAdmin($username, $password);
         $dbAccess->closeDBConnection();
-        if ($admin != null) {
-           
-            $mess .= '<p>$admin esiste '. $admin .'</p>';
-        
 
+        if ($admin == 1) {
+            $_SESSION['username'] = $username;
+            $_SESSION["loggedin"] = true;
+            header("Location: gestione.php");
         } else {
-            $mess .= '<p> $admin è nullo </p>';
-
-
-
+            $mess = '<p>Username o password non corretti. Riprova.</p>';
         }
-
-
-        //if ($admin == 1) {
-        //    $_SESSION['username'] = $username;
-        //    $_SESSION["loggedin"] = true;
-        //    header("Location: gestione.php");
-        //} else {
-        //    $mess = '<p>Username o password non corretti. Riprova.</p>';
-        //}
     }
 } 
 
