@@ -30,7 +30,7 @@ class DBAccess {
 
     public function getAdmin($username, $password) {
 
-        $query = "SELECT * FROM users WHERE username=$username AND pw=$password";
+        $query = "SELECT * FROM users WHERE username=$username";
         $queryResult = mysqli_query($this->connection, $query);
         $rows = mysqli_num_rows($queryResult);
         return $rows;
