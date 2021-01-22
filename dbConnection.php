@@ -28,6 +28,15 @@ class DBAccess {
         $this->connection->close();
     }
 
+    public function getAdmin($username, $password) {
+
+        $query = "SELECT * FROM users WHERE username=$username AND pw=$password";
+        $queryResult = mysqli_query($this->connection, $query);
+        $rows = mysqli_num_rows($queryResult);
+        return $rows;
+
+    }
+
     public function inserisciVolontario($nome, $cognome, $dataNascita, $citta, $telefono, $volontario, $animali, $ore, $motivazione) {
         
         $queryInsV = " INSERT INTO volontari(nome, cognome, dataN, citta, telefono, volontario, animali, ore, motivo) VALUES (\"$nome\", \"$cognome\", \"$dataNascita\", \"$citta\", \"$telefono\", \"$volontario\", \"$animali\", \"$ore\", \"$motivazione\") ";
