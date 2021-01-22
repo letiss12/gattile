@@ -9,13 +9,10 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 }
 $mess ='';
 $pagina = file_get_contents('login.html');
-// If form submitted, insert values into the database.
 if (isset($_POST['username'])){
      
     $username = $_POST['username'];
-    $password = $_POST['password'];
-	//$username = stripslashes($_REQUEST['username']);
-	//$password = stripslashes($_REQUEST['password']);	
+    $password = $_POST['password'];	
     $dbAccess = new DBAccess();
     $connessioneRiuscita = $dbAccess->openDBConnection();
 
