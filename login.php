@@ -26,9 +26,7 @@ if (isset($_POST['username'])){
         $dbAccess->closeDBConnection();
         if ($admin != null) {
            
-            $mess .= '<p>username inserito: ' . $username . ' username giusto: ' . $singoloAdmin['username'] . '</p>';
-            $mess .= '<p>password inserito: ' . $password . ' password giusto: ' . $singoloAdmin['pw'] . '</p>';
-
+            $mess .= '<p>$admin esiste</p>';
         
 
         } else {
