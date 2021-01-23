@@ -1,39 +1,39 @@
 * {
-    box-sizing: border-box;
-    padding: 0em;
-    margin: 0em;
+  box-sizing: border-box;
+  padding: 0em;
+  margin: 0em;
 }
 
 html {
-    background-image: url('../immagini/sfondo.jpg');
-    width: 100%;
-    background-color: #FFFFFF;
-    background-repeat: repeat;
-    background-size: 20em;
+  background-image: url('../immagini/sfondo.jpg');
+  width: 100%;
+  background-color: #FFFFFF;
+  background-repeat: repeat;
+  background-size: 20em;
 }
 
 body {
-    max-width: 1024px;
-    margin: auto;
-    font-size: 100%;
-    background-color: #FFF;
-    font-family: "Verdana", sans-serif;
-    border: 1px solid #DDD;
+  max-width: 1024px;
+  margin: auto;
+  font-size: 100%;
+  background-color: #FFF;
+  font-family: "Verdana", sans-serif;
+  border: 1px solid #DDD;
 }
 
 a:link {
-    color: #000;
+  color: #000;
 }
 
 a:visted {
-    color: #FFFC41;
+  color: #FFFC41;
 }
 
 .aiutiNascosti {
-    position: absolute;
-    height: 0em;
-    overflow: hidden;
-    list-style-type: none;
+  position: absolute;
+  height: 0em;
+  overflow: hidden;
+  list-style-type: none;
 }
 
 /*
@@ -43,35 +43,35 @@ SEZIONE HEADER
 */
 
 #header {
-    padding: 1.0em;
-    text-align: center;
-    min-height: 9em;
-    padding-top: 0em;
+  padding: 1.0em;
+  text-align: center;
+  min-height: 9em;
+  padding-top: 0em;
 }
 
 #header h1 {
-    color: #000000;
-    font-size: 3em;
-    margin: auto;
-    margin-left: 20%;
-    padding-top: 0.5em;
-    text-align: center;
+  color: #000000;
+  font-size: 3em;
+  margin: auto;
+  margin-left: 20%;
+  padding-top: 0.5em;
+  text-align: center;
 }
 
 #header h2 {
-    font-size: 1.3em;
-    font-style: italic;
-    font-weight: normal;
-    margin-left: 15%;
-    text-align: center;
+  font-size: 1.3em;
+  font-style: italic;
+  font-weight: normal;
+  margin-left: 15%;
+  text-align: center;
 }
 
 #logo{
-    float: left;
-    width: 10%;
-    max-width: 9em;
-    margin: 0.5em;
-    margin-left: 2em;
+  float: left;
+  width: 10%;
+  max-width: 9em;
+  margin: 0.5em;
+  margin-left: 2em;
 }
 
 /*
@@ -109,13 +109,13 @@ SEZIONE MENU
 }
 
 #breadcrumb{
-    background-color: #F29BA2;
-    color: #000000;
-    padding: 0.5em 0em 0.5em 1.0em;
-    font-weight: bold;
-    border-top: 1px solid #DDD;
-    border-bottom: 1px solid #DDD;
-    text-align: left;
+  background-color: #F29BA2;
+  color: #000000;
+  padding: 0.5em 0em 0.5em 1.0em;
+  font-weight: bold;
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+  text-align: left;
 }
 
 /*
@@ -125,13 +125,13 @@ SEZIONE CONTENUTO
 */
 
 .contenutoGenerale {
-    width: 80%;
-    font-size: 1em;
-    text-align: left;
+  width: 80%;
+  font-size: 1em;
+  text-align: left;
 }
 
 .elementoBlocco {
-    display: block;
+  display: block;
 }
 
 /*
@@ -139,7 +139,6 @@ SEZIONE CONTENUTO
 CHI SIAMO
 ------------------
 */
-
 #contentChiSiamo{
     padding-left: 2em;
     padding-right: 2em;
@@ -150,114 +149,114 @@ CHI SIAMO
     text-align: center;
 }
 
-.p1, .p3 {
-    text-align: left;
-    margin-top: 1.0em;
-    margin-bottom: 0.5em;
-}
+@media(min-width: 901px){
+    .definitionList dt {
+        font-weight: bold;
+        color: #DD6B05;
+        padding: 0.9em;
+        margin-top: 0.5em;
+        text-align: left;
+        font-size: 1.5em;
+        clear: left;
+    }
 
-.p2{
-    text-align: right;
-    margin-top: 1.0em;
-    margin-bottom: 1em;
-}
+    .definitionList dd {
+        border-top: none;
+        padding: 0.5em;
+        min-height: 12em;
+    }
 
-#ChiSiamo {
-    width: 100%;
-}
+    .definitionList dd img {
+        float: left;
+        width: 35%;
+        margin-right: 1.0em;
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        overflow: auto;
+        clear: both;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+    }
 
-#ChiSiamo dt {
-    font-weight: bold;
-    color: #DD6B05;
-    padding: 0.9em;
-    margin-top: 0.5em;
-    text-align: left;
-    font-size: 1.5em;
-    clear: left;
-}
-
-#ChiSiamo dd {
-    border-top: none;
-    padding: 0.5em;
-    min-height: 12em;
-}
-
-#ChiSiamo dd img {
-    float: left;
-    width: 30%;
-    margin-right: 1.0em;
-    margin-top: 0.5em;
-    margin-left: 0.5em;
-    overflow: hidden;
-    clear: both;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-}
-
-#contentChiSiamo dd p {
-    margin-left: 35%;
-    text-align: justify;
-    color: black;
-    background-color: white;
-    padding: 2em;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    border-style: ridge;
-    border-color: orange;
+    .definitionList dd p {
+        margin-left: 40%;
+        text-align: justify;
+        line-height: 1.5em;
+        color: black;
+        background-color: white;
+        padding: 2em;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+        border-style: ridge;
+        border-color: orange;
+    }
 }
 
 
-/*
-------------------
-IL GATTILE
-------------------
-*/
+@media(max-width: 900px){
 
-#contentIlGattile{
-    padding-left: 2em;
-    padding-right: 2em;
-    width: 100%;
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #DDD;
-    font-size: 1em;
-    text-align: left;
+    .riga_chi_siamo{
+        width: 100% !important;
+        float: left;
+    }
+
+    .img_chi_siamo{
+        width: 100% !important;
+        float: left;
+
+    }
+
+    .testo_chi_siamo{
+        width: 100% !important;
+        float: left;
+    }
+
+    .definitionList dt {
+        font-weight: bold;
+        color: #DD6B05;
+        padding: 0.9em;
+        margin-top: 0.5em;
+        text-align: left;
+        font-size: 1.5em;
+        /clear: left;/
+    }
+
+    .definitionList dd {
+        border-top: none;
+        padding: 0.5em;
+        min-height: 12em;
+    }
+
+    .definitionList dd img {
+        float: left;
+        width: 100%;
+        /margin-right: 1.0em;/
+        margin-top: 0.5em;
+        /margin-left: 0.5em;/
+        margin-bottom: 0.5em;
+        overflow: auto;
+        clear: both;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+    }
+
+    .definitionList dd p {
+        margin-left: 0%;
+        text-align: left;
+        line-height: 1.5em;
+        color: black;
+        background-color: white;
+        padding: 2em;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+        border-style: ridge;
+        border-color: orange;
+    }
 }
-
-#contentIlGattile h1 {
-    color: #8F000C;
-    font-size: 2em;
-    margin: auto;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    text-align: center;
-}
-
-#bannerGattile {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 1em;
-}
-
-#contentIlGattile p {
-    clear: left;
-    text-align: justify;
-    font-size: 1.2em;
-}
-
-#contentIlGattile h2 {
-    color: #8F000C;
-    font-size: 2em;
-    margin: auto;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    text-align: center;
-}
-
 /*
 ---------------
 SEZIONE COME AIUTARCI
@@ -265,89 +264,256 @@ SEZIONE COME AIUTARCI
 */
 
 #contentComeAiutarci{
-    padding-left: 2em;
-    padding-right: 2em;
-    width: 100%;
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #DDD;
-    font-size: 1.2em;
-    text-align: justify;
+  padding-left: 2em;
+  padding-right: 2em;
+  width: 100%;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #DDD;
+  font-size: 1.2em;
+  text-align: justify;
 }
 
 #contentComeAiutarci h1{
-    text-align: center;
-    font-size: 1.3em;
-    color: #DD6B05;
-    margin: auto;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+  text-align: center;
+  font-size: 1.7em;
+  color: #DD6B05;
+  margin: auto;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
 }
 
 #contentComeAiutarci h2{
-    text-align: center;
-    font-size: 1em;
-    color: #DD6B05;
-    margin: auto;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+  text-align: center;
+  font-size: 1em;
+  color: #DD6B05;
+  margin: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 #contentComeAiutarci h3{
-    text-align: left;
-    font-size: 1em;
-    color: #DD6B05;
-    margin: auto;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+  text-align: center;
+  font-size: 1em;
+  color: #DD6B05;
+  margin: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 #contentComeAiutarci p {
-    text-align: center;
-    font-size: 1em;
-    margin: auto;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+  text-align: center;
+  font-size: 1em;
+  margin: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
-#ComeAiutarci {
-    width: 100%;
-}
-
-#ComeAiutarci dt {
-    font-weight: bold;
-    color: #DD6B05;
-    margin-top: 0.5em;
-    text-align: left;
-    font-size: 1em;
-}
-
-#ComeAiutarci dd {
-    border-top: none;
-    padding: 0.5em;
-}
-
-
-#ComeAiutarci dd p {
-    text-align: justify;
+#contentComeAiutarci ul {
+	padding: 1.5em;
+	-webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  border-style: ridge;
+  border-color: orange;
+  line-height: 1.5em;
+  margin-bottom: 0.5em;
 }
 
 .button {
-  background-color: #F29BA2;
-  border: none;
-  padding: 15px 32px;
+  background-color: white;
+  border: 0.2em solid #F29BA2;
+  padding: 0.5em 0.5em;
   text-align: center;
   text-decoration: underline;
   display: block;
-  font-size: 2em;
-  width: 50%;
+  font-size: 1.5em;
+  width: 100%;
   cursor: pointer;
-  display: inline-block;
 
 }
 
 .button:hover {
-  background-color: #A3D9D9;
-  color: white;
+  background-color: #F29BA2;
+  color: black;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+div.gallery {
+  /*border: 1px solid #ccc;*/
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.donazioni img {
+  width: 50%;
+  display: table;
+  margin: auto;
+
+}
+div.desc {
+  padding: 15px;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.responsive {
+  padding: 0.5em;
+  border: 1px solid #ccc;
+}
+
+.donazioni{
+    border: 1px solid #ccc;
+} 
+
+@media only screen and (max-width: 900px) {
+  .responsive {
+    width: 100%;
+    margin-bottom: 0.5em;
+  }
+
+  .donazioni{
+    margin-bottom: 0.5em;  
+  }
+}
+
+@media only screen and (min-width: 981px) {
+  .donazioni{
+    margin-bottom: 0.5em;
+  }
+
+  .contenuto_come_aiutarci{
+    display: inline-block;
+    width: 100%;
+    /*margin-bottom: 0.5em;*/
+  }
+
+  .responsive {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    width: 31.33333%;
+    margin: 0 1%;
+    float: left;
+    height: 42em;
+    /*display: table-cell;*/
+  }
+}
+
+.clearfix:after {
+  content: "";
+  /*display: table;*/
+  clear: both;
+}
+/*
+------------------
+SEZIONE ADOZIONI
+------------------
+*/
+
+#contentAdozioni{
+  padding-left: 2em;
+  padding-right: 2em;
+  width: 100%;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #DDD;
+  font-size: 1.2em;
+  text-align: justify;
+}
+
+#contentAdozioni h1{
+  text-align: center;
+  font-size: 1.7em;
+  color: #DD6B05;
+  margin: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+#contentAdozioni p{
+  text-align: center;
+  font-size: 1em;
+  margin: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+/*
+---------------
+SEZIONE CONTATTI
+---------------
+*/
+
+#contentContatti{
+  padding-left: 2em;
+  padding-right: 2em;
+  width: 100%;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #DDD;
+  font-size: 1.2em;
+  text-align: justify;
+}
+
+#contentContatti h1{
+  text-align: center;
+  font-size: 1.8em;
+  color: #DD6B05;
+  margin: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+#contentContatti h2{
+  margin: auto;
+  text-align: center;
+  font-size: 1.5em;
+  color: #DD6B05;
+  padding-top: 0.5em;
+  padding-bottom: 0.3em;
+}
+
+#contentContatti h3{
+  text-align: left;
+  font-size: 1.5em;
+  color: #DD6B05;
+  margin: auto;
+  padding-bottom: 0.3em;
+}
+
+#contentContatti p{
+  text-align: center;
+  font-size: 1em;
+  margin: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+#iconaFB {
+  float: left;
+  width: 20%;
+  clear: both;
+  display: inline;
+  padding-right: 0.5em;
+}
+
+#SeguiciSuFacebook {
+  list-style-type: none;
+  width: 50%;
+  display: table;
+  margin: auto;
+  text-align: center;
+}
+
+#contentContatti ul {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 1.5em;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  border-style: ridge;
+  border-color: orange;
+  line-height: 1.7em;
 }
 
 /*
@@ -357,18 +523,18 @@ SEZIONE FOOTER
 */
 
 #footer{
-    text-align: center;
-    font-style: italic;
-    font-size: 1em;
-    padding: 0.5em;
-    padding-top: 1.3em;
-    border-top: 1px solid #ddd;
+  text-align: center;
+  font-style: italic;
+  font-size: 1em;
+  padding: 0.5em;
+  padding-top: 1.3em;
+  border-top: 1px solid #ddd;
 }
 
 #imgValidCode{
-    float: left;
+  float: left;
 }
 
 #imgValidCSS{
-    float: right;
+  float: right;
 }
