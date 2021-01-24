@@ -17,7 +17,7 @@ body {
   margin: auto;
   font-size: 100%;
   background-color: #FFF;
-  font-family: "Verdana", sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
   border: 1px solid #DDD;
 }
 
@@ -132,22 +132,6 @@ ul li a:hover {
   border-top: 1px solid #DDD;
   border-bottom: 1px solid #DDD;
   text-align: left;
-}
-
-/*
-------------------
-SEZIONE CONTENUTO
-------------------
-*/
-
-.contenutoGenerale {
-  width: 80%;
-  font-size: 1em;
-  text-align: left;
-}
-
-.elementoBlocco {
-  display: block;
 }
 
 /*
@@ -384,7 +368,7 @@ div.desc {
     border: 1px solid #ccc;
 } 
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 980px) {
   .responsive {
     width: 100%;
     margin-bottom: 0.5em;
@@ -450,14 +434,136 @@ SEZIONE ADOZIONI
   padding-bottom: 0.5em;
 }
 
+#contentAdozioni h2{
+  text-align: center;
+  font-size: 1em;
+  color: #DD6B05;
+  margin: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
 #contentAdozioni p{
   text-align: center;
   font-size: 1em;
   margin: auto;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+  line-height: 1.5em;
 }
 
+/*
+---------------
+SEZIONE VOLONTARIATO
+---------------
+*/
+
+#contentVolontario h1{
+  text-align: center;
+  font-size: 1.8em;
+  color: #DD6B05;
+  margin: auto;
+  padding-top: 0.7em;
+  padding-bottom: 0.5em;
+}
+
+#contentVolontario p{
+  text-align: center;
+  font-size: 1.5em;
+  margin: auto;
+  padding-top: 0.5em;
+  line-height: 1.5em;
+}
+
+form {
+  padding: 2em;
+  width: 100%;
+  display: table;
+  margin: auto;
+}
+
+fieldset {
+  margin-top: 2em;
+  padding-bottom: 1em;
+}
+
+input[type=radio]{
+  width:2% !important ;
+
+}
+legend {
+  font-size: 2em;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1em;
+  color: #DD6B05;
+}
+
+label {
+  font-size: 1.5em;
+  padding-left: 1em;
+  margin-bottom: 0.5em;
+}
+
+textarea {
+  width: 90%;
+  height: 100%;
+  padding: 1.5em;
+  margin-top: 1em;
+  margin: auto;
+  display: table;
+  box-sizing: border-box;
+  border: 0.5em solid #ccc;
+  resize: none;
+}
+
+@media only screen and (max-width: 980px) {
+  input {
+  width: 95%;
+  padding: 2em 2em;
+  margin: 1em 0em 1em 1em;
+  box-sizing: border-box;
+  font-size: 0.8em;
+  border: 0.5em solid #ccc;
+}
+}
+
+@media only screen and (min-width: 981px) {
+  input {
+  width: 40%;
+  padding: 2em 2em;
+  margin: 1em 0em 1em 1em;
+  box-sizing: border-box;
+  font-size: 0.8em;
+  border: 0.5em solid #ccc;
+}
+}
+
+#info p {
+  font-size: 1.5em;
+  padding-left: 1em;
+  padding-top: 1em;
+}
+
+#buttonVolontario {
+  background-color: white;
+  border: 0.2em solid #F29BA2;
+  padding: 0.5em 0.5em;
+  text-align: center;
+  text-decoration: underline;
+  display: table;
+  margin: auto;
+  font-size: 2em;
+  width: 80%;
+  cursor: pointer;
+
+}
+
+#buttonVolontario:hover {
+  background-color: #F29BA2;
+  color: black;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
 /*
 ---------------
 SEZIONE CONTATTI
