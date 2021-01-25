@@ -26,7 +26,7 @@ a:link {
 }
 
 a:visted {
-  color: #FFFC41;
+  color: #661E67;
 }
 
 .aiutiNascosti {
@@ -135,6 +135,160 @@ ul li a:hover {
 }
 
 /*
+---------------
+SEZIONE HOME
+---------------
+*/
+
+#contentHome h1{
+  text-align: center;
+  font-size: 2em;
+  color: #DD6B05;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  color: #DD6B05;
+}
+
+#contentHome {
+  text-align: center;
+  font-size: 1.2em;
+  color: #DD6B05;
+  margin-left: 0.5em;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  margin-right: 0.5em;
+}
+
+@media(min-width: 901px){
+.definitionList dt {
+    font-weight: bold;
+    color: #DD6B05;
+    padding: 0.9em;
+    margin-top: 0.5em;
+    text-align: left;
+    font-size: 1.5em;
+    clear: left;
+  }
+
+  .definitionList dd {
+    border-top: none;
+    padding: 0.5em;
+    min-height: 12em;
+  }
+
+  .definitionList dd img {
+    float: left;
+    width: 35%;
+    margin-right: 1.0em;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+    overflow: auto;
+    clear: both;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+  }
+
+  .definitionList dd p {
+    margin-left: 40%;
+    text-align: justify;
+    line-height: 1.5em;
+    color: black;
+    background-color: white;
+    padding: 2em;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    border-style: ridge;
+    border-color: orange;
+  }
+}
+
+
+@media(max-width: 900px){
+
+  .riga_missione{
+    width: 100% !important;
+    float: left;
+  }
+
+  .img_gattini{
+    width: 100% !important;
+    float: left;
+  }
+
+  .testo_missione{
+    width: 100% !important;
+    float: left;
+  }
+
+.definitionList dt {
+    font-weight: bold;
+    color: #DD6B05;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    text-align: center;
+    font-size: 1.5em;
+
+  }
+
+  .definitionList dd {
+    border-top: none;
+    padding: 0.5em;
+    min-height: 12em;
+  }
+
+  .definitionList dd img {
+    float: center;
+    width: 60%;
+
+    margin-top: 0.5em;
+
+    margin-bottom: 1em;
+    overflow: auto;
+    clear: both;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+  }
+
+  .definitionList dd p {
+    margin-left: 0%;
+    margin-bottom: 1em;
+    text-align: left;
+    line-height: 1.5em;
+    color: black;
+    background-color: white;
+    padding: 2em;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    border-style: ridge;
+    border-color: orange;
+  }
+}
+
+.buttonHome {
+  width: 40%;
+  background-color: white;
+  border: 0.2em solid #F29BA2;
+  padding: 0.5em 0.5em;
+  text-align: center;
+  text-decoration: underline;
+  display: block;
+  font-size: 2em;
+  cursor: pointer;
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
+}
+
+.buttonHome:hover {
+  background-color: #F29BA2;
+  color: black;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/*
 ------------------
 CHI SIAMO
 ------------------
@@ -219,7 +373,7 @@ CHI SIAMO
     margin-top: 0.5em;
     text-align: center;
     font-size: 1.5em;
-    /*clear: left;*/
+
   }
 
   .definitionList dd {
@@ -231,9 +385,9 @@ CHI SIAMO
   .definitionList dd img {
     float: center;
     width: 60%;
-    /*margin-right: 1.0em;*/
+
     margin-top: 0.5em;
-    /*margin-left:0.5em;*/
+
     margin-bottom: 1em;
     overflow: auto;
     clear: both;
@@ -338,10 +492,6 @@ SEZIONE COME AIUTARCI
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-div.gallery {
-  /*border: 1px solid #ccc;*/
-}
-
 div.gallery img {
   width: 100%;
   height: auto;
@@ -390,7 +540,6 @@ div.desc {
   .contenuto_come_aiutarci{
     display: inline-block;
     width: 100%;
-    /*margin-bottom: 0.5em;*/
   }
 
   .responsive {
@@ -400,15 +549,15 @@ div.desc {
     margin: 0 1%;
     float: left;
     height: 42em;
-    /*display: table-cell;*/
   }
 }
 
 .clearfix:after {
   content: "";
-  /*display: table;*/
+
   clear: both;
 }
+
 /*
 ------------------
 SEZIONE ADOZIONI
@@ -563,6 +712,10 @@ textarea {
   background-color: #F29BA2;
   color: black;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.errore {
+  color: red;
 }
 /*
 ---------------
