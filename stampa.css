@@ -1,0 +1,296 @@
+* {
+	padding: 0em;
+	margin: 0em;
+}
+
+html, body {
+  margin: auto;
+  font-size: 100%;
+  font-family: "Verdana", "Arial", sans-serif;
+}
+
+.aiutiNascosti {
+	display:none;
+}
+
+.aiutoTornaSu {
+  display: none;
+}
+
+a:link:after, a:visited:after {
+content: " [" attr(href) "] ";
+font-size:90%;
+}
+
+img {
+	display: none;
+}
+
+  .button {
+  	display: none;
+  }
+
+h1 {
+  font-size: 20px;
+  margin: auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+h3 {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+/*
+---------------
+SEZIONE HEADER
+---------------
+*/
+
+#header {
+  padding: 1.0em;
+  text-align: center;
+  min-height: 2em;
+  padding-top: 0em;
+}
+
+#header h1 {
+  font-size: 20px;
+  margin: auto;
+  text-align: center;
+}
+
+#header h2 {
+  font-size: 15px;
+  font-style: italic !important;
+  font-weight: normal;
+  text-align: center;
+}
+
+.logo{
+  display: none;
+}
+
+.buttonAdmin {
+	display: none;
+}
+/*
+-------------------
+SEZIONE MENU
+-------------------
+*/
+
+ul.topnav {
+	display: none;
+}
+
+#breadcrumb{
+  padding: 0.5em 0em 0.5em 1.0em;
+  font-size: 12px;
+  font-weight: bold;
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+  text-align: left;
+}
+
+/*
+------------------
+HOME
+------------------
+*/
+
+.buttonHome {
+	display: none;
+}
+/*
+------------------
+CHI SIAMO
+------------------
+*/
+
+#contentChiSiamo{
+  padding: 0.5em;
+  width: 100%;
+  font-size: 12px;
+  text-align: left;
+}
+
+.definitionList dt {
+    font-weight: bold;
+    padding: 0.5em;
+    text-align: left;
+    font-size: 12px;
+    clear: left;
+}
+
+.definitionList dd {
+    border-top: none;
+    padding: 0.5em;
+    min-height: 20px;
+
+}
+
+.definitionList dd p {
+    text-align: justify;
+    line-height: 1.5em;
+    padding: 1.2em;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    border-style: ridge;
+}
+
+/*
+---------------
+SEZIONE COME AIUTARCI
+---------------
+*/
+#contentComeAiutarci{
+  padding: 0.5em;
+  width: 100%;
+  font-size: 12px;
+  text-align: left;
+  line-height: 1.5em;
+}
+
+#contentComeAiutarci p {
+  margin: auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#contentComeAiutarci ul {
+  padding: 2em;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  border-style: ridge;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+}
+/*
+---------------
+SEZIONE CONTATTI
+---------------
+*/
+
+#contentContatti{
+  padding: 0.5em;
+  width: 100%;
+  font-size: 12px;
+  text-align: left;
+  line-height: 1.5em;
+}
+
+
+#contentContatti p{
+  margin: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+#SeguiciSuFacebook {
+  list-style-type: none;
+  width: 95%;
+  text-align: center;
+}
+
+#contentContatti ul {
+  width: 90%;
+  padding: 2em;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  border-style: ridge;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+
+#indicazioniPadova {
+	page-break-after: always;
+}
+
+/*
+------------------
+SEZIONE ADOZIONI
+------------------
+*/
+#contentAdozioni{
+  padding: 0.5em;
+  width: 100%;
+  font-size: 12px;
+  text-align: left;
+  line-height: 1.5em;
+}
+
+
+#contentAdozioni p{
+  margin: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+/*
+------------------
+SEZIONE VOLONTARIATO
+------------------
+*/
+#contentAdozioni{
+  padding: 0.5em;
+  width: 100%;
+  font-size: 12px;
+  text-align: left;
+  line-height: 1.5em;
+}
+
+
+#contentAdozioni p{
+  margin: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+legend {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+fieldset {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 1em;
+}
+fieldset.candidatura {
+	display: none;
+}
+/*
+------------------
+SEZIONE FOOTER
+------------------
+*/
+
+#footer {
+  text-align: center;
+  font-style: italic;
+  font-size: 12px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+#imgValidCode{
+  display: none;
+}
+
+#imgValidCSS{
+  display: none;
+}
+
