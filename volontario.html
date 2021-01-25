@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <script type="text/javascript" src="checkFormVolontario.js"></script>
     <link rel="stylesheet" type="text/css" href="style/web.css" media="handheld, screen"/>
+    <link rel="stylesheet" ink type="text/css" href="style/stampa.css" media="print"/>
 </head>
 <body>
     <div id="header">
@@ -38,7 +39,7 @@
 
      <div id="contentVolontario">
         <h1>Diventa un volontario del Rifugio</h1>
-        <p>I micetti ti ringraziano!</p>
+        <p>Con il tuo aiuto renderemo il gattile un posto ancora più accogliente. </br> I micetti ti ringraziano!</p>
      </div>
      
      <div>
@@ -63,14 +64,14 @@
 
             <fieldset id="info">
                 <legend>Informazioni Generali</legend>
-                <p>Hai già svolto volontariato presso altri enti?</p>
+                <p>Hai già svolto volontariato presso altri enti?</p>
                 <div>
                 <input type="radio" id="noVolontario" name="volontariato" value="0" checked>
                 <label for="noVolontario">No, mai</label>
                 </div>
                 <div>
                 <input type="radio" id="siVolonratio" name="volontariato" value="1">
-                <label for="siVolontario">Si</label><br>
+                <label for="siVolontario">Si</label></br>
                 </div>
                 <p>Sei o sei stato proprietario di animali?</p>
                 <div>
@@ -79,7 +80,7 @@
                 </div>
                 <div>
                 <input type="radio" id="siAnimali" name="animali" value="1">
-                <label for="siAnimali">Si</label><br>
+                <label for="siAnimali">Si</label></br>
                 </div>
                 <label for="oreVol">Quante ore a settimana puoi dedicarci?</label>
                 <span><input type="text" id="oreVol" name="oreVol" maxlength="3" value="<valoreOre />"/></span><br />
@@ -87,7 +88,7 @@
                 <span><textarea id="motivazione" name="motivazione" value="<valoreMotiv />" rows="5" cols="50"></textarea></span>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="candidatura">
                 <legend>Inoltra la tua candidatura</legend>
                 <button id="buttonVolontario" type="submit" name="submit">Invia!</button>
             </fieldset>
